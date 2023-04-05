@@ -1,0 +1,52 @@
+@import "../base";
+
+.about {
+   margin-top: 80px;
+   &__title {
+      @include style (2rem, 140%, $font_color_light);
+      text-align: center;
+   }
+
+   &__description {
+      text-align: center;
+      margin-top: 30px;
+      text-indent: 3rem;
+      @include style (1.25rem, 140%, $font_color_light);
+   }
+
+   &__attention {
+      @include style (1.25rem, 140%, $font_color_light);
+      margin-top: 50px;
+      display: flex;
+   }
+
+   &__sign {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(222, 144, 144);
+      margin-right: 20px;
+
+      span {
+         width: 80px;
+         text-align: center;
+      }
+   }
+
+   &__map {
+      margin-top: 80px;
+   }
+}
+.map {
+
+   &__title {
+      @include style (2rem, 140%, $font_color_light);
+      text-align: center;
+   }
+
+   &__content {
+      margin-top: 20px;
+      text-align: center;
+   }
+}
+

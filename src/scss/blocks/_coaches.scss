@@ -1,0 +1,41 @@
+@import "../base";
+
+.coaches {
+   margin-top: 80px;
+		&__title {
+         @include style(2rem, 140%, $font_color_light);
+         text-align: center;
+		}
+
+		&__content {
+         margin-top: 50px;
+         display: flex;
+         justify-content: center;
+		}
+
+		&__items {
+         &>*:not(:last-child) {
+            margin-bottom: 50px;
+         }
+		}
+
+		&__item {
+		}
+
+      &__inner {
+         display: flex;
+         gap: 20px;
+         img {
+            width: 400px;
+         }
+      }
+
+      &__name {
+         margin-bottom: 10px;
+         @include style(1.5rem, 140%, $font_color_light);
+      }
+
+      &__about {
+         max-width: 400px;
+      }
+}

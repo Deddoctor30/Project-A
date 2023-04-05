@@ -1,0 +1,42 @@
+@import "../base";
+
+.information {
+
+   &__title {
+      margin-top: 50px;
+      @include style (2rem, 140%, $font_color_light);
+   }
+
+   &__items {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__logo {
+      margin: 0 auto;
+      img {
+         width: 300px;
+      }
+   }
+
+   &__to {
+      display: flex;
+   }
+
+   &__from {
+      display: flex;
+   }
+
+   &__vehicle {
+      width: 200px;
+   }
+
+   &__content {
+      margin-left: 30px;
+   }
+}

@@ -1,8 +1,10 @@
 // _________________________________Шрифты____________________________________
-@import url(../fonts/Gilroy/bold/style.css);
-@import url(../fonts/Gilroy/regular/style.css);
-@import url(../fonts//Nekst/black/style.css);
-@import url(../fonts//Nekst/regular/style.css);
+// @import url(../fonts/Gilroy/bold/style.css);
+// @import url(../fonts/Gilroy/regular/style.css);
+// @import url(../fonts//Nekst/black/style.css);
+// @import url(../fonts//Nekst/regular/style.css);
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 // ___________________________________________________________________________
 
 
@@ -16,7 +18,7 @@
 // ____________________________Дефолтные настройки______________________________
 
 html, body {
-   font-family: gilroy;
+   font-family: 'Roboto', sans-serif;
 	font-size: 16px;
    line-height: 1;
    font-weight: 400;
@@ -32,44 +34,44 @@ html, body {
    color: $c;
 }
 
-$input_bg_color: #F3F3F4;
+$header_line_color: #bedce7;
+$header_line_height: 3rem;
 
-$font_color_dark: #333333;
-
-$font_color_dark_second: #111111;
-$font_color_light: #575757;
-
+$font_color_dark: #ffffff;
+$font_color_light: #000000;
 
 $main_color: #FF9514;
+$second_color: #FF9514;
+
 
 // __________________________________Кнопки_______________________________________
 
 
 
-.btn {
-   height: 68px;
+// .btn {
+//    height: 68px;
 
-   @include style(1.875rem, 2.25rem, $font_color_dark);
-   font-family: 'Nekst-Black';
-   font-style: normal;
-   font-weight: 900;
-   color: #FFFFFF;
-   background: $main_color;
-   &_long {
-      border-radius: 40px;
-      width: 426px;
-   }
-   &:hover {
-      background: $font_color_dark_second;
-   }
-   :active {
-      background: $font_color_light;
-   }
-}
+//    @include style(1.875rem, 2.25rem, $font_color_dark);
+//    font-family: 'Nekst-Black';
+//    font-style: normal;
+//    font-weight: 900;
+//    color: #FFFFFF;
+//    background: $main_color;
+//    &_long {
+//       border-radius: 40px;
+//       width: 426px;
+//    }
+//    &:hover {
+//       background: $font_color_dark_second;
+//    }
+//    :active {
+//       background: $font_color_light;
+//    }
+// }
 
-.btn-disabled {
-   background: rgba(255, 149, 20, 0.4);
-}
+// .btn-disabled {
+//    background: rgba(255, 149, 20, 0.4);
+// }
 
 
 
@@ -83,7 +85,7 @@ $main_color: #FF9514;
 
 .container {
    //_________________Ширина контейнера_________________
-   max-width: 1345px;
+   max-width: 1170px;
 
    //_____________________По центру_____________________
    margin: 0 auto;
@@ -95,4 +97,14 @@ $main_color: #FF9514;
 
 .hide {
    display: none;
+}
+
+.link {
+   text-decoration: underline;
+   color: lightblue;
+}
+
+.title {
+   @include style (2rem, 140%, $font_color_light);
+   margin: 80px 0px 20px 0px;
 }

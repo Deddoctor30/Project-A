@@ -4,9 +4,173 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Project A</title>
+   <!-- <link type="image/x-icon" rel="shortcut icon" href="…/favicon.ico"> -->
+   <link type="image/png" sizes="16x16" rel="icon" href="./img/favicon/icon16.png">
+   <link type="image/png" sizes="32x32" rel="icon" href="./img/favicon/icon32.png">
+   <link type="image/png" sizes="96x96" rel="icon" href="./img/favicon/icon96.png">
+   <!-- <link type="image/png" sizes="120x120" rel="icon" href="…/favicon-120x120.png"> -->
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-   
+
+
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__line">
+            <div class="header__content">
+               <ul class="header__items">
+                  <li class="header__item"><a href="./index.html">Главная страница</a></li>
+                  <li class="header__item"><a href="./coaches.html">Тренеры клуба</a></li>
+                  <li class="header__item"><a href="./information.html">Информация</a></li>
+                  <li class="header__item"><a href="./competition.html">Календарь соревнований</a></li>
+                  <li class="header__item"><a href="./clinical.html">Диспансеризация</a></li>
+                  <li class="header__item"><a href="./articles.html">Статьи</a></li>
+                  <li class="header__item"><a href="./about.html">О нас</a></li>
+               </ul>
+               <div class="header__auth">
+                  <ul class="header__items">
+                     <li class="header__item"><a href="#">Личный кабинет</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+
+
+      <div class="container">
+         <section class="main">
+            <div class="main__logo">
+               <img src="./img/main/logo/00.jpg" alt="club-start">
+               <div class="main__hello">Фехтовальный кулуб "СТАРТ"</div>
+            </div>
+            <div class="main__news news swiper">
+               <h2 class="news__title title">Последние новости</h2>
+               <div class="news__wrapper swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="news__item">
+                        <div class="news__img">
+                           <div class="news__main-img">
+                              <img src="./img/main/news/01/01.png" alt="spartakiada">
+                           </div>
+                           <div class="news__second-img">
+                           </div>
+                        </div>
+                        <div class="news__content">
+                           Пензенской области доверили принимать юных спортсменов со всей страны. В этом году Спартакиадное движение отмечает своеобразный юбилей:в 2003 году в нашей стране началось возрождение Спартакиад учащихся. С 10 июня по 15 августа 2013 года в г.Пензе пройдут финальные соревнования VI летней Спартакиады учащихся России  по 27 видам спорта.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="news__item">
+                        <div class="news__img">
+                           <div class="news__main-img">
+                              <img src="./img/main/news/02/04.gif" alt="spartakiada">
+                           </div>
+                           <div class="news__second-img">
+                              <img src="./img/main/news/02/02.jpg" alt="spartakiada">
+                              <img src="./img/main/news/02/03.jpg" alt="spartakiada">
+                           </div>
+
+                        </div>
+                        <div class="news__content">
+                           В этом году прямо у вагона поезда нас тепло и радушно встречали студенты-волонтеры ПТТС (Пензенский техникум транспорта и сервиса).
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="news__item">
+                        <div class="news__img">
+                           <div class="news__main-img">
+                              <img src="./img/main/news/03/05.jpg" alt="spartakiada">
+                           </div>
+                           <div class="news__second-img">
+                              <img src="./img/main/news/03/06.jpg" alt="spartakiada">
+                              <img src="./img/main/news/03/06.jpg" alt="spartakiada">
+                              <img src="./img/main/news/03/06.jpg" alt="spartakiada">
+                              <img src="./img/main/news/03/06.jpg" alt="spartakiada">
+                           </div>
+
+                        </div>
+                        <div class="news__content">
+                           Соревнования по фехтованию проходили в легкоатлетическом манеже Училища Олимпийского резерва.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="main__competitions competitions">
+               <h2 class="competitions__title title">Календарь ближайших соревнований нашего клуба</h2>
+               <div class="competitions__wrapper">
+                  <p class="competitions__future">Предстоящие соревнования</p>
+                  <div class="competitions__item">
+                     <div class="competitions__date">
+                        <div class="competitions__month">МАЙ</div>
+                        <div class="competitions__day">25</div>
+                     </div>
+                     <div class="competitions__img"><img src="./img/main/competitions/06.jpg" alt="123"></div>
+                     <div class="competitions__inner">
+                        <div class="competitions__name">Турнир "Аничков Дворец" г. Санкт-Петербург</div>
+                        <div class="competitions__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque inventore hic obcaecati in deleniti, eligendi, exercitationem optio animi suscipit beatae quos officia tempore, tenetur incidunt porro eos nesciunt veniam neque.</div>
+                        <div class="competition__time-wrapper">
+                           <div class="competitions__time">10:00</div>
+                        </div>
+                        <div class="competitions__address"><div class="competitions__address-">г. Санкт-Петербург, ул. Андрея Белого, 11Б</div></div>
+                     </div>
+                  </div>
+                  <div class="competitions__item">
+                     <div class="competitions__date">
+                        <div class="competitions__month">МАЙ</div>
+                        <div class="competitions__day">13</div>
+                     </div>
+                     <div class="competitions__img"><img src="./img/main/competitions/07.png" alt="123"></div>
+                     <div class="competitions__inner">
+                        <div class="competitions__name">Турнир "Аничков Дворец" г. Санкт-Петербург</div>
+                        <div class="competitions__content">Информация о турнире</div>
+                        <div class="competition__time-wrapper">
+                           <div class="competitions__time">10:00</div>
+                        </div>
+                        <div class="competitions__address">г. Санкт-Петербург, ул. Андрея Белого, 11Б</div>
+                     </div>
+                  </div>
+                  <div class="competitions__item">
+                     <div class="competitions__date">
+                        <div class="competitions__month">МАЙ</div>
+                     </div>
+                     <div class="competitions__img"><img src="./img/main/competitions/08.png" alt="123"></div>
+                     <div class="competitions__inner">
+                        <div class="competitions__name">Турнир "Юность Москвы" г.Москва</div>
+                        <div class="competitions__content">Информация о турнире</div>
+                        <div class="competition__time-wrapper">
+                           <div class="competitions__time">10:00</div>
+                        </div>
+                        <div class="competitions__address">г. Санкт-Петербург, ул. Андрея Белого, 11Б</div>
+                     </div>
+                  </div>
+                  <p class="competitions__past">Прошедшие соревнования</p>
+                  <div class="competitions__item">
+                     <div class="competitions__date">
+                        <div class="competitions__month">МАРТ</div>
+                        <div class="competitions__day">31</div>
+                     </div>
+                     <div class="competitions__img"><img src="./img/main/competitions/08.png" alt="123"></div>
+                     <div class="competitions__inner">
+                        <div class="competitions__name">Турнир "Юность Москвы" г.Москва</div>
+                        <div class="competitions__content">Информация о турнире</div>
+                        <div class="competition__time-wrapper">
+                           <div class="competitions__time">10:00</div>
+                        </div>
+                        <div class="competitions__address">г. Санкт-Петербург, ул. Андрея Белого, 11Б</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+
+
+   </div>
+   <script src="../dist/js/bundle.js"></script>
 </body>
 </html>
