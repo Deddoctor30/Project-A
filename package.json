@@ -1,7 +1,7 @@
 {
   "name": "project_a",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://github.com/Deddoctor30/Project-A",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
