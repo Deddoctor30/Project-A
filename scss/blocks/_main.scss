@@ -1,0 +1,177 @@
+@import "../base";
+
+.main {
+   
+		&__news {
+		}
+
+		&__competitions {
+		}
+
+      &__logo {
+         margin-top: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         img {
+            width: 300px;
+         }
+      }
+      &__hello {
+         margin-left: 20px;
+         @include style (2rem, 140%, $font_color_light);
+      }
+}
+
+.news {
+   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   margin-top: 80px;
+		&__title {
+      }
+
+		&__wrapper {
+		}
+		&__item {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         height: 100%;
+		}
+
+		&__img {
+         display: flex;
+         gap: 5px;
+		}
+
+      &__main-img {
+         img {
+            width: 600px;
+            height: 400px;
+         }
+      }
+      &__second-img {
+         display: grid;
+         // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr;
+         column-gap: 5px;
+         row-gap: 5px;
+         img {
+            height: 197.5px;
+            width: 100%;
+         }
+      }
+
+		&__content {
+         margin-top: 20px;
+         @include style (1.125rem, 140%, $font_color_light);
+		}
+
+}
+
+.competitions {
+   margin-top: 80px;
+      &__future {
+         margin: 0px 0px 10px 0px;
+         @include style (1.125rem, 140%, $font_color_light);
+      }
+      &__past {
+         margin: 50px 0px 10px 0px;
+         @include style (1.125rem, 140%, red);
+      }
+
+		&__wrapper {
+		}
+
+		&__item {
+         min-height: 160px;
+         display: flex;
+         align-items: center;
+         margin-bottom: 10px;
+		}
+
+		&__date {
+         background-color: $header_line_color;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 85px;
+         align-self: stretch;
+		}
+      &__month {
+         @include style(1.625rem, 140%, $font_color_dark);
+      }
+      &__day {
+         @include style(1.625rem, 140%, $font_color_dark);
+      }
+
+		&__img {
+         margin-left: 20px;
+         img {
+            max-width: 100px;
+         }
+		}
+
+		&__inner {
+         margin-left: 20px;
+         display: flex;
+         flex-direction: column;
+         padding: 20px;
+         width: 1000px;
+         background-color: #6969690a;
+         &>*:not(:last-child){
+            margin-bottom: 10px;
+         }
+		}
+
+		&__name {
+
+		}
+
+		&__content {
+		}
+		&__time {
+         position: relative;
+         left: 20px;
+         background-color: #6262621b;
+         display: inline-block;
+         padding: 5px 10px;
+         border-radius: 50px;
+         &::before {
+            content: "";
+            background-image: url(/src/img/main/competitions/clock.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            background-size: 18px;  
+            height: 18px;
+            width: 18px;
+            top: 4px;
+            left: -27px;
+            // z-index: 5;
+         }
+		}
+		&__address {
+         display: inline-block;
+         &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+         }
+		}
+      
+}
+
+.arrows {
+   &::after {
+      // font-size: 60px;
+   }
+   &::before {
+      // font-size: 60px;
+   }
+}
+
+.swiper-pagination-bullet {
+   width: 12px;
+   height: 12px;
+}
+

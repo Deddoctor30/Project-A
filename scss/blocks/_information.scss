@@ -1,0 +1,68 @@
+@import "../base";
+
+.information {
+   margin-top: 50px;
+
+   &__title {
+      @include style (2rem, 140%, $font_color_light);
+   }
+
+   &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+   }
+
+   &__item {
+      padding: 10px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      @include style (1.125rem, 140%, $font_color_light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e8e8e825;
+      column-gap: 20px;
+   }
+
+   &__logo {
+      margin: 0 auto;
+      img {
+         max-width: 200px;
+      }
+   }
+
+   &__to {
+      flex: 0 1 50%;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 20px;
+      img {
+         width: 130px;
+         height: 45px;
+      }
+   }
+
+   &__from {
+      flex: 0 1 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      img {
+         width: 130px;
+         height: 45px;
+         transform: scale(-1, 1);
+      }
+   }
+
+   &__vehicle {
+      width: 200px;
+   }
+
+   &__content {
+      flex: 0 1 20%;
+   }
+}

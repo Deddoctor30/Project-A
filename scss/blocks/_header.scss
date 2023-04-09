@@ -1,0 +1,54 @@
+@import "../base";
+
+.header {
+   &__line {
+      background-color: $header_line_color;
+      min-height: $header_line_height;
+   }
+
+   &__content {
+      max-width: 1170px;
+      margin: 0 auto;
+      min-height: $header_line_height;
+
+      @include style (1rem, 140%, $font_color_light);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__items {
+      display: flex;
+   }
+
+   &__item {
+
+      display: flex;
+      &:hover {
+         background-color: rgba(50, 85, 151, 0.155);
+      }
+      a {
+         padding: ($header_line_height / 2) 15px;
+      }
+   }
+
+   &__auth {
+      // position: relative;
+      // &::before {
+      //    content: "";
+      //    background-image: url(/src/img/user/user.png);
+      //    background-repeat: no-repeat;
+      //    position: absolute;
+      //    background-size: 32px;  
+      //    height: 32px;
+      //    width: 32px;
+      //    top: 19px;
+      //    left: 0px;
+      //    // z-index: 5;
+      // }
+      // a {
+      //    padding: ($header_line_height / 2) 40px;
+      // }
+   }
+}

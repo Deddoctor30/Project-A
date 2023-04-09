@@ -1,0 +1,56 @@
+@import "../base";
+
+   .footer{
+      margin-top: 100px;
+      background: $header_line_color;
+      padding:30px 0px;
+      text-align:center;
+
+      &__row {
+         width:100%;
+         margin:1% 0%;
+         padding:0.6% 0%;
+         color:gray;
+         font-size:0.8em;
+      }
+
+      &__item {
+         text-decoration:none;
+         color:gray;
+         transition: all ease 0.1;
+         i {
+            font-size:2em;
+            margin:0% 1%;
+         }
+         &:hover {
+            color:#fff;
+         }
+      }
+
+      &__items {
+         width:100%;
+      }
+
+      &__visit {
+         display:inline-block;
+         margin:0px 30px;
+      }
+   }
+   
+
+
+   
+   // @media (max-width:720px){
+   // .footer{
+   // text-align:left;
+   // padding:5%;
+   // }
+   // .footer .row ul li{
+   // display:block;
+   // margin:10px 0px;
+   // text-align:left;
+   // }
+   // .footer .row a i{
+   // margin:0% 3%;
+   // }
+   // }

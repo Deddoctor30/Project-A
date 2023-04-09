@@ -1,0 +1,90 @@
+@import "../base";
+
+.competition {
+   margin-top: 80px;
+   margin-bottom: 100px;
+		&__title {
+         @include style (1.5rem, 100%, $font_color_light);
+         margin-bottom: 20px;
+		}
+
+		&__calendar {
+		}
+}
+.calendar {
+
+		&__wrapper {
+         box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+		}
+
+		&__table {
+         width: 100%;
+         padding: 20px;
+         border-collapse: collapse;
+		}
+
+      &__date {
+         position: relative;
+         text-align: left;
+         border: 1px solid #e2e8f0;
+         padding: 15px;
+         @include style (1.375rem, 100%, $font_color_light);
+         font-weight: 700;
+      }
+
+      &__arrows {
+         position: absolute;
+         top: 10px;
+         left: 200px;
+         display: inline-block;
+      }
+
+      &__arrow {
+         width: 30px;
+         height: 30px;
+         font-size: 1.325rem;
+         margin-left: 5px;
+      }
+
+		&__header {
+		}
+
+		&__body {
+         
+		}
+
+      &__content {
+         margin-top: 20px;
+         color: rgb(82, 90, 100);
+      }
+}
+
+th {
+   padding: 1rem;
+   // width: 2.5rem;
+   border: 1px solid #e2e8f0;
+}
+
+td {
+   width: 167px;
+   height: 10rem;
+   border: 1px solid #e2e8f0;
+   color: rgba(160,174,192);
+   vertical-align: top;
+   text-align: center;
+   &:hover {
+      background-color: rgba(173, 216, 230, 0.341);
+   }
+}
+
+.tableData {
+   padding-top: 8px;
+}
+
+.mainMonth {
+   color: rgb(16, 17, 19);
+}
+.notMainMonth {
+   color: rgb(160, 174, 192);
+}
+
