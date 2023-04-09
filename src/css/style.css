@@ -8,6 +8,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -119,13 +121,6 @@ html, body {
   color: lightblue;
 }
 
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
-}
-
 * {
   transition: 0.3s all ease 0s;
 }
@@ -157,13 +152,6 @@ html, body {
 .link {
   text-decoration: underline;
   color: lightblue;
-}
-
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
 }
 
 .header__line {
@@ -226,13 +214,6 @@ html, body {
   color: lightblue;
 }
 
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
-}
-
 .main__logo {
   margin-top: 20px;
   display: flex;
@@ -249,6 +230,9 @@ html, body {
   color: #000000;
 }
 
+.news {
+  margin-top: 80px;
+}
 .news__item {
   display: flex;
   flex-direction: column;
@@ -282,8 +266,11 @@ html, body {
   color: #000000;
 }
 
+.competitions {
+  margin-top: 80px;
+}
 .competitions__future {
-  margin: 30px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
   font-size: 1.125rem;
   line-height: 140%;
   color: #000000;
@@ -323,8 +310,7 @@ html, body {
   margin-left: 20px;
 }
 .competitions__img img {
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
 }
 .competitions__inner {
   margin-left: 20px;
@@ -364,6 +350,11 @@ html, body {
   text-decoration: underline;
 }
 
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
 * {
   transition: 0.3s all ease 0s;
 }
@@ -397,15 +388,10 @@ html, body {
   color: lightblue;
 }
 
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
-}
-
-.information__title {
+.information {
   margin-top: 50px;
+}
+.information__title {
   font-size: 2rem;
   line-height: 140%;
   color: #000000;
@@ -413,28 +399,57 @@ html, body {
 .information__items {
   display: flex;
   flex-direction: column;
+  gap: 50px;
 }
 .information__item {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size: 1.125rem;
+  line-height: 140%;
+  color: #000000;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(232, 232, 232, 0.1450980392);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 .information__logo {
   margin: 0 auto;
 }
 .information__logo img {
-  width: 300px;
+  max-width: 200px;
 }
 .information__to {
+  flex: 0 1 50%;
   display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+}
+.information__to img {
+  width: 130px;
+  height: 45px;
 }
 .information__from {
+  flex: 0 1 30%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.information__from img {
+  width: 130px;
+  height: 45px;
+  transform: scale(-1, 1);
 }
 .information__vehicle {
   width: 200px;
 }
 .information__content {
-  margin-left: 30px;
+  flex: 0 1 20%;
 }
 
 * {
@@ -468,13 +483,6 @@ html, body {
 .link {
   text-decoration: underline;
   color: lightblue;
-}
-
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
 }
 
 .coaches {
@@ -491,24 +499,46 @@ html, body {
   display: flex;
   justify-content: center;
 }
-.coaches__items > *:not(:last-child) {
-  margin-bottom: 50px;
+.coaches__items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 80px;
+}
+.coaches__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 1 400px;
+  cursor: pointer;
 }
 .coaches__inner {
-  display: flex;
-  gap: 20px;
+  width: 400px;
+  padding: 0px 0px 130% 0px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
 }
 .coaches__inner img {
-  width: 400px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .coaches__name {
-  margin-bottom: 10px;
+  margin: 20px 0px 10px 0px;
   font-size: 1.5rem;
   line-height: 140%;
   color: #000000;
 }
 .coaches__about {
   max-width: 400px;
+  text-align: center;
 }
 
 * {
@@ -544,15 +574,8 @@ html, body {
   color: lightblue;
 }
 
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
-}
-
 .competition {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 100px;
 }
 .competition__title {
@@ -625,19 +648,59 @@ td:hover {
   color: rgb(160, 174, 192);
 }
 
+* {
+  transition: 0.3s all ease 0s;
+}
+
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: black;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+.hide {
+  display: none;
+}
+
+.link {
+  text-decoration: underline;
+  color: lightblue;
+}
+
 .articles {
   margin-top: 80px;
 }
 .articles__text {
   font-size: 1.125rem;
-  line-height: 120%;
+  line-height: 140%;
   color: #000000;
+  word-spacing: 2px;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  text-indent: 50px;
 }
 .articles__strong {
-  color: red;
+  font-style: italic;
+  color: lightcoral;
+  margin-left: 60px;
+  text-align: justify;
 }
 .articles__autor {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: right;
   font-size: 1.375rem;
   line-height: 120%;
@@ -680,13 +743,15 @@ html, body {
   color: lightblue;
 }
 
-.title {
+.clinical {
+  margin-top: 80px;
+}
+.clinical__title {
   font-size: 2rem;
   line-height: 140%;
   color: #000000;
-  margin: 80px 0px 20px 0px;
+  margin-bottom: 20px;
 }
-
 .clinical__about {
   font-size: 1.5rem;
   line-height: 100%;
@@ -794,13 +859,6 @@ html, body {
   color: lightblue;
 }
 
-.title {
-  font-size: 2rem;
-  line-height: 140%;
-  color: #000000;
-  margin: 80px 0px 20px 0px;
-}
-
 .about {
   margin-top: 80px;
 }
@@ -849,4 +907,70 @@ html, body {
 .map__content {
   margin-top: 20px;
   text-align: center;
+}
+
+* {
+  transition: 0.3s all ease 0s;
+}
+
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: black;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+.hide {
+  display: none;
+}
+
+.link {
+  text-decoration: underline;
+  color: lightblue;
+}
+
+.footer {
+  margin-top: 100px;
+  background: #bedce7;
+  padding: 30px 0px;
+  text-align: center;
+}
+.footer__row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+.footer__item {
+  text-decoration: none;
+  color: gray;
+  transition: all ease 0.1;
+}
+.footer__item i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+.footer__item:hover {
+  color: #fff;
+}
+.footer__items {
+  width: 100%;
+}
+.footer__visit {
+  display: inline-block;
+  margin: 0px 30px;
 }

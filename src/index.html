@@ -10,6 +10,7 @@
    <link type="image/png" sizes="32x32" rel="icon" href="./img/favicon/icon32.png">
    <link type="image/png" sizes="96x96" rel="icon" href="./img/favicon/icon96.png">
    <!-- <link type="image/png" sizes="120x120" rel="icon" href="…/favicon-120x120.png"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -45,7 +46,6 @@
                <div class="main__hello">Фехтовальный кулуб "СТАРТ"</div>
             </div>
             <div class="main__news news swiper">
-               <h2 class="news__title title">Последние новости</h2>
                <div class="news__wrapper swiper-wrapper">
                   <div class="swiper-slide">
                      <div class="news__item">
@@ -98,10 +98,14 @@
                      </div>
                   </div>
                </div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button-next arrows"></div>
+               <div class="swiper-button-prev arrows"></div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-scrollbar"></div>
             </div>
 
             <div class="main__competitions competitions">
-               <h2 class="competitions__title title">Календарь ближайших соревнований нашего клуба</h2>
                <div class="competitions__wrapper">
                   <p class="competitions__future">Предстоящие соревнования</p>
                   <div class="competitions__item">
@@ -169,8 +173,31 @@
          </section>
       </div>
 
+      <footer class="footer">
+         <div class="footer__row">
+            <a class="footer__item" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="footer__item" href="#"><i class="fa fa-instagram"></i></a>
+            <a class="footer__item" href="#"><i class="fa fa-youtube"></i></a>
+            <a class="footer__item" href="#"><i class="fa fa-twitter"></i></a>
+         </div>
+         
+         <div class="footer__row">
+            <ul class="footer__items">
+               <li class="footer__visit"><a href="#">Написать нам</a></li>
+               <li class="footer__visit"><a href="#">Our Services</a></li>
+               <li class="footer__visit"><a href="#">Privacy Policy</a></li>
+               <li class="footer__visit"><a href="#">Terms & Conditions</a></li>
+               <li class="footer__visit"><a href="#">Career</a></li>
+            </ul>
+         </div>
+         
+         <div class="footer__row">
+            Тут что-то будет написано 
+         </div>
+      </footer>
 
    </div>
+   <!-- <script src="https://kit.fontawesome.com/5333883276.js" crossorigin="anonymous"></script> -->
    <script src="../dist/js/bundle.js"></script>
 </body>
 </html>

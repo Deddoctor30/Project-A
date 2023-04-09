@@ -1,7 +1,7 @@
 @import "../base";
 
 .competition {
-   margin-top: 50px;
+   margin-top: 80px;
    margin-bottom: 100px;
 		&__title {
          @include style (1.5rem, 100%, $font_color_light);

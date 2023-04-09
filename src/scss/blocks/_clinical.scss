@@ -1,8 +1,10 @@
 @import "../base";
 
 .clinical {
-
+	margin-top: 80px;
 		&__title {
+			@include style (2rem, 140%, $font_color_light);
+			margin-bottom: 20px;
 		}
 
 		&__about {

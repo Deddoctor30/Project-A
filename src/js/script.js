@@ -4,5 +4,8 @@ import competition from './modules/competition';
 
 window.addEventListener('DOMContentLoaded', () => {
    main();
-   competition();
+
+   if(document.querySelector('.competition__calendar')) {
+      competition();
+   }
 });

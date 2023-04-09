@@ -1,15 +1,23 @@
+@import "../base";
+
 .articles {
    margin-top: 80px;
 		&__text {
-         @include style (1.125rem, 120%, $font_color_light);
+         @include style (1.125rem, 140%, $font_color_light);
+         word-spacing: 2px;
+         hyphens: auto;
+         text-indent: 50px;
 		}
 
 		&__strong {
-         color: red;
+         font-style: italic;        
+         color: lightcoral; 
+         margin-left: 60px;
+         text-align: justify;
 		}
 
       &__autor {
-         margin-top: 30px;
+         margin-top: 50px;
          text-align: right;
          @include style (1.375rem, 120%, $font_color_light);
          span {
