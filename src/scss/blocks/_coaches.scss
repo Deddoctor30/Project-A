@@ -1,9 +1,9 @@
-@import "../base";
+// @import "../base";
 
 .coaches {
    margin-top: 80px;
 		&__title {
-         @include style(2rem, 140%, $font_color_light);
+         @include style(2rem, 140%);
          text-align: center;
 		}
 
@@ -58,7 +58,7 @@
 
       &__name {
          margin: 20px 0px 10px 0px;
-         @include style(1.5rem, 140%, $font_color_light);
+         @include style(1.5rem, 140%);
       }
 
       &__about {

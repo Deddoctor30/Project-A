@@ -1,17 +1,18 @@
-@import "../base";
 
 .header {
+   color: white;
    &__line {
-      background-color: $header_line_color;
-      min-height: $header_line_height;
+      background-color: var(--header-line-color);
+      min-height: var(--header-line-height);
+      border-bottom: 2px solid white;
    }
 
    &__content {
       max-width: 1170px;
       margin: 0 auto;
-      min-height: $header_line_height;
+      min-height: var(--header-line-height);
 
-      @include style (1rem, 140%, $font_color_light);
+      @include style (1rem, 140%);
 
       display: flex;
       justify-content: space-between;
@@ -29,7 +30,7 @@
          background-color: rgba(50, 85, 151, 0.155);
       }
       a {
-         padding: ($header_line_height / 2) 15px;
+         padding: (calc(var(--header-line-height) / 2)) 15px;
       }
    }
 

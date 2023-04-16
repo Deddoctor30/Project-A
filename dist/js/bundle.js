@@ -1,6 +1,57 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/bgSwitcher.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/bgSwitcher.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var bgSwitcher = function bgSwitcher() {
+  // const wrapper = document.querySelector('.wrapper');
+  var switcher = document.querySelector('.switcher__input');
+  var body = document.querySelector('body');
+  var header = document.querySelector('.header__line');
+  var footer = document.querySelector('.footer');
+  switcher.addEventListener('click', function () {
+    switcher.toggleAttribute('checked');
+    if (switcher.hasAttribute('checked')) {
+      body.style.setProperty('--bg-color', '#171717');
+      body.style.setProperty('--text-color', 'white');
+      header.style.setProperty('--header-line-color', '#171717');
+      footer.style.setProperty('--header-line-color', '#171717');
+      switcher.style.cssText = 'color: white';
+      if (document.querySelector('.mainMonth')) {
+        document.querySelectorAll('.mainMonth').forEach(function (item) {
+          item.style.cssText = 'color: white';
+        });
+      }
+    } else {
+      body.style.setProperty('--bg-color', 'white');
+      body.style.setProperty('--text-color', 'black');
+      header.style.setProperty('--header-line-color', '#1D84B5');
+      footer.style.setProperty('--header-line-color', '#1D84B5');
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (bgSwitcher);
+
+/***/ }),
+
 /***/ "./src/js/modules/competition.js":
 /*!***************************************!*\
   !*** ./src/js/modules/competition.js ***!
@@ -39,6 +90,19 @@ var competition = function competition() {
   var monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
   monthName.textContent = "".concat(monthNames[month], " ");
   yearName.textContent = year;
+  var colorChanger = function colorChanger() {
+    var newData = document.querySelectorAll('td');
+    var switcher = document.querySelector('.switcher__input');
+    if (switcher.hasAttribute('checked')) {
+      newData.forEach(function (item) {
+        item.classList.add("mainMonthDark");
+      });
+    } else {
+      newData.forEach(function (item) {
+        item.classList.add("mainMonth");
+      });
+    }
+  };
   var arrowNext = function arrowNext() {
     arrNext.addEventListener('click', function () {
       var tableRow = document.querySelectorAll('.tableRow');
@@ -55,10 +119,9 @@ var competition = function competition() {
         monthName.textContent = "".concat(monthNames[month], " ");
       }
       createNet(year, month);
-      // console.log(month);
+      colorChanger();
     });
   };
-
   arrowNext();
   var arrowPrev = function arrowPrev() {
     arrPrev.addEventListener('click', function () {
@@ -76,6 +139,7 @@ var competition = function competition() {
         monthName.textContent = "".concat(monthNames[month], " ");
       }
       createNet(year, month);
+      colorChanger();
     });
   };
   arrowPrev();
@@ -128,6 +192,7 @@ var competition = function competition() {
     }
   };
   createNet(year, month);
+  colorChanger();
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (competition);
 
@@ -13734,10 +13799,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/main */ "./src/js/modules/main.js");
 /* harmony import */ var _modules_competition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/competition */ "./src/js/modules/competition.js");
+/* harmony import */ var _modules_bgSwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/bgSwitcher */ "./src/js/modules/bgSwitcher.js");
+
 
 
 window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_main__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_modules_bgSwitcher__WEBPACK_IMPORTED_MODULE_2__["default"])();
   if (document.querySelector('.competition__calendar')) {
     (0,_modules_competition__WEBPACK_IMPORTED_MODULE_1__["default"])();
   }

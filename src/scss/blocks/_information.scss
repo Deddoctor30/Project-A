@@ -4,7 +4,7 @@
    margin-top: 50px;
 
    &__title {
-      @include style (2rem, 140%, $font_color_light);
+      @include style (2rem, 140%);
    }
 
    &__items {
@@ -16,11 +16,11 @@
    &__item {
       padding: 10px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-      @include style (1.125rem, 140%, $font_color_light);
+      @include style (1.125rem, 140%);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #e8e8e825;
+      background-color: rgba(177, 177, 177, 0.2901960784);
       column-gap: 20px;
    }
 
