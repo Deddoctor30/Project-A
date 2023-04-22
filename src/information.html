@@ -16,59 +16,98 @@
       <header class="header">
          <div class="header__line">
             <div class="header__content">
-               <ul class="header__items">
-                  <li class="header__item"><a href="./index.html">Главная страница</a></li>
-                  <li class="header__item"><a href="./coaches.html">Тренеры клуба</a></li>
-                  <li class="header__item"><a href="./information.html">Информация</a></li>
-                  <li class="header__item"><a href="./competition.html">Календарь соревнований</a></li>
-                  <li class="header__item"><a href="./clinical.html">Диспансеризация</a></li>
-                  <li class="header__item"><a href="./articles.html">Статьи</a></li>
-                  <li class="header__item"><a href="./about.html">О нас</a></li>
-               </ul>
-               <div class="header__auth">
-                  <ul class="header__items">
-                     <div class="switcher">
-                        <p>Сменить тему</p>
-                        <input class="switcher__input" type="checkbox" id="switch" />
-                        <label for="switch">Toggle</label>
+               <div class="header__items">
+                  <div class="header__item"><a class="header__link" href="./index.html">Главная страница</a></div>
+                  
+                  
+                  <div class="header__item info">
+                     <div class="info__item header__item"><p class="header__link" id="info-trigger">Информация</p></div>
+                     <div class="info__inner">
+                        <div class="info__item header__item"><a id="info-trigger" href="./information.html">Информация</a></div>
+                        <div class="info__item header__item"><a href="./coaches.html">Тренеры клуба</a></div>
+                        <div class="info__item header__item"><a href="./competition.html">Календарь соревнований</a></div>
                      </div>
-                     <li class="header__item"><a href="#">Личный кабинет</a></li>
-                  </ul>
+                  </div>
+
+
+                  <div class="header__item"><a class="header__link" href="./achievements.html">Последние достижения</a></div>
+                  <div class="header__item"><a class="header__link" href="./clinical.html">Диспансеризация</a></div>
+                  <div class="header__item"><a class="header__link" href="./articles.html">Статьи</a></div>
+                  <div class="header__item"><a class="header__link" href="./about.html">О нас</a></div>
                </div>
+
+
+               <div class="header__auth">
+                  <div class="header__items auth">
+                     <div class="header__item auth__item"><p class="header__link" id="auth-trigger">Настройки</p></div>
+                     <div class="header__inner auth__inner">
+                        <div class="switcher">
+                           <p class="switcher__text header__link">Сменить тему</p>
+                           <input class="switcher__input" type="checkbox" id="switch" />
+                           <label for="switch">Toggle</label>
+                        </div>
+                        <div class="header__item auth__item"><a href="#">Войти</a></div>
+                     </div>
+                  </div>
+               </div>
+
+
             </div>
          </div>
       </header>
       <div class="container">
          <section class="information">
-            <h1 class="information__title">Внимание!</h1>
+            <h1 class="information__title title animation">Информация о соревнованиях</h1>
             <div class="information__items">
+
                <div class="information__item">
                   <div class="information__logo">
                      <img src="./img/information/51.png" alt="kazan">
                   </div>
-                  <div class="information__to">
+                  <div class="information__header">
                      <img class="information__vehicle" src="./img/information/52.gif" alt="airplane">
+                     <p>Отправление</p>
+                  </div>
+                  <div class="information__header">Встречаемя</div>
+                  <div class="information__header information__from">
+                     <img class="information__vehicle" src="./img/information/52.gif" alt="airplane">
+                     <p>Обратно</p>
+                  </div>
+                  <div class="information__header">
                      <p class="information__content">Спортсменки КШВСМ (Загвоздина В., Кунцевич Е.), отбывающие 30.03.2023 (четверг) на Международные соревнования по фехтованию в г. Казань, летят рейсом 5N-597 (отбытие 13.25).</p>
                   </div>
-                  <p class="information__content">Встречаемся 30.03.2023 (четверг) в аэропорту Пулково в 11.30</p>
-                  <div class="information__from">
-                     <img class="information__vehicle" src="./img/information/52.gif" alt="airplane">
+                  <div class="information__header">
+                     <p class="information__content">Встречаемся 30.03.2023 (четверг) в аэропорту Пулково в 11.30</p>
+                  </div>
+                  <div class="information__header">
                      <p class="information__content">Обратно спортсменки возвращаются 01.04.2023 (суббота) рейсом 5N-538 в 00.10</p>
                   </div>
                </div>
+
                <div class="information__item">
                   <div class="information__logo">
-                     <img class="information__logo" src="./img/information/53.png" alt="moscow">
-                     <img class="information__logo" src="./img/information/54.jpg" alt="dzerzhinsk">
+                     <img src="./img/information/53.png" alt="moscow">
+                     <img src="./img/information/54.jpg" alt="dzerzhinsk">
                   </div>
-                  <div class="information__to">
-                     <img class="information__vehicle" src="./img/information/55.gif" alt="train">
+                  <div class="information__header">
+                     <img class="information__vehicle" src="./img/information/56.gif" alt="train">
+                     <p>Отправление</p>
+                  </div>
+                  <div class="information__header">Встречаемя</div>
+                  <div class="information__header information__from">
+                     <img class="information__vehicle" src="./img/information/56.gif" alt="airplane">
+                     <p>Обратно</p>
+                  </div>
+                  <div class="information__header">
                      <p class="information__content">Спортсменки КШВСМ (Дударкаева К., Загвоздина В., Кунцевич Е., Лоскутникова С.), отбывающие 23.04.2023 (воскресенье) на ВС по фехтованию в г. Москва, едут поездом №25, вагон №1 (отбытие 21.21).</p>
                   </div>
-                  <p class="information__content">Встречаемся 23.04.2023 (воскресенье) на Московском вокзале в 20.30</p>
-                  <div class="information__from">
-                     <img class="information__vehicle" src="./img/information/52.gif" alt="airplane">
+                  <div class="information__header">
+                     <p class="information__content">Встречаемся 23.04.2023 (воскресенье) на Московском вокзале в 20.30</p>
+                     
+                  </div>
+                  <div class="information__header">
                      <p class="information__content">Обратно спортсменки возвращаются 29.04.2023 (суббота) на Московский вокзал, поезд №59, вагон №16 в 10.05</p>
+
                   </div>
                </div>
 
@@ -84,17 +123,24 @@
          </div>
          
          <div class="footer__row">
-            <ul class="footer__items">
+            <ul class="footer__items footer__contacts">
                <li class="footer__visit"><a href="#">Написать нам</a></li>
-               <li class="footer__visit"><a href="#">Our Services</a></li>
-               <li class="footer__visit"><a href="#">Privacy Policy</a></li>
-               <li class="footer__visit"><a href="#">Terms & Conditions</a></li>
-               <li class="footer__visit"><a href="#">Career</a></li>
+               <li class="footer__visit"><a href="tel:+99999999">Tel: +7 (495) 174-15-85</a></li>
+               <li class="footer__visit"><a href="#">Контакт №1</a></li>
+               <li class="footer__visit"><a href="#">Контакт №2</a></li>
             </ul>
          </div>
          
          <div class="footer__row">
-            Тут что-то будет написано 
+            <ul class="footer__items">
+            </ul>
+         </div>
+         <div class="footer__row footer__rights">
+            <ul class="footer__items">
+               <li class="footer__visit"><a href="#">Политика конфиденциальности</a></li>
+               <li class="footer__visit"><a href="#">Условия использования</a></li>
+               <li class="footer__visit end">by NovikovV  <span>© 2023</span></span></li>
+            </ul>
          </div>
       </footer>
    </div>

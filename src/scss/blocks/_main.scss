@@ -120,7 +120,7 @@
          flex-direction: column;
          padding: 20px;
          width: 1000px;
-         background-color: #b1b1b14a;
+         background-color: var(--background-dark);
          &>*:not(:last-child){
             margin-bottom: 10px;
          }

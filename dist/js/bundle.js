@@ -22,31 +22,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var bgSwitcher = function bgSwitcher() {
-  // const wrapper = document.querySelector('.wrapper');
   var switcher = document.querySelector('.switcher__input');
   var body = document.querySelector('body');
   var header = document.querySelector('.header__line');
   var footer = document.querySelector('.footer');
+  var info = document.querySelector('.info__inner');
   switcher.addEventListener('click', function () {
-    switcher.toggleAttribute('checked');
-    if (switcher.hasAttribute('checked')) {
+    if (localStorage.getItem('bg') === 'changed') {
+      localStorage.removeItem('bg');
+    } else {
+      localStorage.setItem('bg', 'changed');
+    }
+    themeChanger();
+  });
+  function themeChanger() {
+    if (localStorage.getItem('bg') === 'changed') {
       body.style.setProperty('--bg-color', '#171717');
       body.style.setProperty('--text-color', 'white');
       header.style.setProperty('--header-line-color', '#171717');
       footer.style.setProperty('--header-line-color', '#171717');
-      switcher.style.cssText = 'color: white';
+      info.style.setProperty('--header-line-color', 'black');
       if (document.querySelector('.mainMonth')) {
         document.querySelectorAll('.mainMonth').forEach(function (item) {
           item.style.cssText = 'color: white';
         });
       }
+      switcher.setAttribute('checked', true);
     } else {
       body.style.setProperty('--bg-color', 'white');
       body.style.setProperty('--text-color', 'black');
       header.style.setProperty('--header-line-color', '#1D84B5');
       footer.style.setProperty('--header-line-color', '#1D84B5');
+      info.style.setProperty('--header-line-color', '#1D84B5');
+      switcher.removeAttribute('checked');
     }
-  });
+  }
+  themeChanger();
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (bgSwitcher);
 
@@ -195,6 +206,45 @@ var competition = function competition() {
   colorChanger();
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (competition);
+
+/***/ }),
+
+/***/ "./src/js/modules/header.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/header.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var header = function header() {
+  var infoTrigger = document.querySelector('#info-trigger');
+  var infoInner = document.querySelector('.info__inner');
+  var infoBlock = document.querySelector('.info');
+  var authTrigger = document.querySelector('#auth-trigger');
+  var authInner = document.querySelector('.auth__inner');
+  var authBlock = document.querySelector('.auth');
+  if (infoTrigger) {
+    infoTrigger.addEventListener('mouseover', function () {
+      infoInner.style.cssText = 'top: 70px';
+    });
+    infoBlock.addEventListener('mouseleave', function () {
+      infoInner.style.cssText = 'top: -300px';
+    });
+  }
+  if (authTrigger) {
+    authTrigger.addEventListener('mouseover', function () {
+      authInner.style.cssText = 'top: 70px';
+    });
+    authBlock.addEventListener('mouseleave', function () {
+      authInner.style.cssText = 'top: -300px';
+    });
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);
 
 /***/ }),
 
@@ -13800,12 +13850,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/main */ "./src/js/modules/main.js");
 /* harmony import */ var _modules_competition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/competition */ "./src/js/modules/competition.js");
 /* harmony import */ var _modules_bgSwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/bgSwitcher */ "./src/js/modules/bgSwitcher.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js");
+
 
 
 
 window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_main__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_bgSwitcher__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_header__WEBPACK_IMPORTED_MODULE_3__["default"])();
   if (document.querySelector('.competition__calendar')) {
     (0,_modules_competition__WEBPACK_IMPORTED_MODULE_1__["default"])();
   }

@@ -1,7 +1,17 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -80,10 +90,6 @@ input[disabled] {
   background-color: inherit;
 }
 
-* {
-  transition: 0.2s all ease 0s;
-}
-
 html, body {
   position: relative;
   font-family: "Roboto", sans-serif;
@@ -131,20 +137,43 @@ html, body {
   color: lightblue;
 }
 
+.title {
+  font-size: 2.5rem;
+  line-height: 140%;
+  letter-spacing: 1.6px;
+  margin-top: 40vh;
+  margin-bottom: 50vh;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+}
+
 .header {
   color: white;
+  position: relative;
+  z-index: 1000;
 }
 .header__line {
+  position: relative;
   background-color: var(--header-line-color);
   min-height: var(--header-line-height);
-  border-bottom: 2px solid white;
+}
+.header__line::before {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  color: white;
+  background-color: white;
+  z-index: -1000;
 }
 .header__content {
+  font-size: 1rem;
+  line-height: 140%;
   max-width: 1170px;
   margin: 0 auto;
   min-height: var(--header-line-height);
-  font-size: 1rem;
-  line-height: 140%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,9 +187,93 @@ html, body {
 .header__item:hover {
   background-color: rgba(50, 85, 151, 0.155);
 }
-.header__item a {
+.header__link {
   padding: calc(var(--header-line-height) / 2) 15px;
 }
+.info {
+  position: relative;
+}
+.info__item:not(:first-child) {
+  border-top: 1px solid white;
+}
+.info__inner {
+  transition: 0.3s all ease 0s;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  max-width: 300px;
+  background-color: var(--header-line-color);
+  z-index: -100;
+}
+.info__inner a {
+  padding: 15px 15px;
+}
+
+.auth {
+  position: relative;
+}
+.auth__item:not(:first-child) {
+  border-top: 1px solid white;
+}
+.auth__inner {
+  transition: 0.3s all ease 0s;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 210px;
+  background-color: var(--header-line-color);
+  z-index: -100;
+}
+.auth__inner a {
+  padding: 15px 15px;
+}
+
+.switcher p {
+  display: inline-block;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 26px;
+  background: grey;
+  display: inline-block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 1.25px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 22.5px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--main-color);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 35px;
+}
+
 .main__logo {
   margin-top: 20px;
   display: flex;
@@ -260,7 +373,7 @@ html, body {
   flex-direction: column;
   padding: 20px;
   width: 1000px;
-  background-color: rgba(177, 177, 177, 0.2901960784);
+  background-color: var(--background-dark);
 }
 .competitions__inner > *:not(:last-child) {
   margin-bottom: 10px;
@@ -295,10 +408,6 @@ html, body {
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-}
-
-* {
-  transition: 0.2s all ease 0s;
 }
 
 html, body {
@@ -348,59 +457,58 @@ html, body {
   color: lightblue;
 }
 
-.information {
-  margin-top: 50px;
-}
-.information__title {
-  font-size: 2rem;
+.title {
+  font-size: 2.5rem;
   line-height: 140%;
+  letter-spacing: 1.6px;
+  margin-top: 40vh;
+  margin-bottom: 50vh;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
 }
-.information__items {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
+
 .information__item {
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1.125rem;
   line-height: 140%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(177, 177, 177, 0.2901960784);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  box-shadow: var(--shadow);
+  background-color: var(--background);
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 1fr;
+  gap: 5px;
+}
+.information__item:not(:last-child) {
+  margin-bottom: 50px;
 }
 .information__logo {
-  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/3;
 }
 .information__logo img {
   max-width: 200px;
 }
-.information__to {
-  flex: 0 1 50%;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: 20px;
+.information__logo img:not(:last-child) {
+  margin-bottom: 10px;
 }
-.information__to img {
+.information__header {
+  background-color: rgba(177, 177, 177, 0.2901960784);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.information__header img {
   width: 130px;
   height: 45px;
-}
-.information__from {
-  flex: 0 1 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
+  margin-bottom: 20px;
 }
 .information__from img {
-  width: 130px;
-  height: 45px;
   transform: scale(-1, 1);
 }
 .information__vehicle {
@@ -410,16 +518,106 @@ html, body {
   flex: 0 1 20%;
 }
 
-.coaches {
-  margin-top: 80px;
+html, body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-color);
+  z-index: 5;
 }
-.coaches__title {
-  font-size: 2rem;
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+.wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg/bg.jpg) no-repeat;
+  background-size: cover;
+  z-index: -5;
+  filter: opacity(15%) blur(4px) brightness(50%);
+}
+
+.container {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+  z-index: 50;
+}
+
+.hide {
+  display: none;
+}
+
+.link {
+  text-decoration: underline;
+  color: lightblue;
+}
+
+.title {
+  font-size: 2.5rem;
   line-height: 140%;
+  letter-spacing: 1.6px;
+  margin-top: 40vh;
+  margin-bottom: 50vh;
+  font-family: "Russo One", sans-serif;
   text-align: center;
 }
+
+.achievements__items {
+  display: flex;
+  flex-direction: column;
+}
+.achievements__item {
+  padding: 10px;
+  font-size: 1.125rem;
+  line-height: 140%;
+}
+.achievements__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.achievements__logo {
+  text-align: center;
+}
+.achievements__logo img {
+  max-width: 400px;
+}
+.achievements__content {
+  margin-top: 10px;
+}
+.achievements__images {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.achievements__img {
+  flex: 0 1 49%;
+}
+.achievements__img img {
+  width: 100%;
+  height: 100%;
+}
+.achievements__more {
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 15px 20px;
+  border: 1px solid black;
+}
+
 .coaches__content {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
 }
@@ -435,6 +633,8 @@ html, body {
   flex-direction: column;
   flex: 0 1 400px;
   cursor: pointer;
+  background-color: var(--background-dark);
+  box-shadow: var(--shadow);
 }
 .coaches__inner {
   width: 400px;
@@ -454,8 +654,12 @@ html, body {
   top: 0;
   left: 0;
 }
+.coaches__info {
+  padding: 20px;
+}
 .coaches__name {
-  margin: 20px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
+  text-align: center;
   font-size: 1.5rem;
   line-height: 140%;
 }
@@ -464,15 +668,6 @@ html, body {
   text-align: center;
 }
 
-.competition {
-  margin-top: 80px;
-  margin-bottom: 100px;
-}
-.competition__title {
-  font-size: 1.5rem;
-  line-height: 100%;
-  margin-bottom: 20px;
-}
 .calendar__wrapper {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -541,9 +736,6 @@ td:hover {
   color: rgb(160, 174, 192);
 }
 
-.articles {
-  margin-top: 80px;
-}
 .articles__text {
   font-size: 1.125rem;
   line-height: 140%;
@@ -568,14 +760,6 @@ td:hover {
   text-decoration: underline;
 }
 
-.clinical {
-  margin-top: 80px;
-}
-.clinical__title {
-  font-size: 2rem;
-  line-height: 140%;
-  margin-bottom: 20px;
-}
 .clinical__about {
   font-size: 1.5rem;
   line-height: 100%;
@@ -600,6 +784,7 @@ td:hover {
   margin-right: 20px;
 }
 .responsibility__sign span {
+  font-size: 2rem;
   width: 80px;
   text-align: center;
 }
@@ -649,13 +834,11 @@ td:hover {
 .people__overdue {
   display: flex;
 }
-.about {
-  margin-top: 80px;
-}
 .about__title {
   font-size: 2rem;
   line-height: 140%;
   text-align: center;
+  font-family: "Pacifico", cursive;
 }
 .about__description {
   text-align: center;
@@ -678,6 +861,7 @@ td:hover {
   margin-right: 20px;
 }
 .about__sign span {
+  font-size: 2rem;
   width: 80px;
   text-align: center;
 }
@@ -697,16 +881,15 @@ td:hover {
 
 .footer {
   border-top: 2px solid white;
-  margin-top: 100px;
+  margin-top: 50px;
   background: var(--header-line-color);
-  padding: 30px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
   text-align: center;
   color: white;
 }
 .footer__row {
   width: 100%;
-  margin: 1% 0%;
-  padding: 0.6% 0%;
+  margin: 40px 0px;
   font-size: 0.8em;
 }
 .footer__item {
@@ -726,6 +909,19 @@ td:hover {
 .footer__visit {
   display: inline-block;
   margin: 0px 30px;
+}
+.footer__rights {
+  margin: 40px 0px 20px 0px;
+  font-size: 0.8rem;
+}
+
+.end {
+  font-size: 1.4rem;
+  font-family: "Dancing Script", cursive;
+}
+.end span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
 }
 
 .button {
@@ -776,64 +972,28 @@ td:hover {
   transform: translateY(0);
 }
 
-.switcher {
-  position: fixed;
-  top: 100px;
-  right: 80px;
-}
-.switcher p {
-  position: relative;
-  top: 15px;
-  left: -22px;
-  color: black;
-}
-
-input[type=checkbox] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 50px;
-  height: 26px;
-  background: grey;
-  display: block;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: "";
-  position: absolute;
-  top: 1.25px;
-  left: 3px;
-  width: 22px;
-  height: 22px;
-  background: #fff;
-  border-radius: 22.5px;
-  transition: 0.3s;
-}
-
-input:checked + label {
-  background: var(--main-color);
-}
-
-input:checked + label:after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
-
-label:active:after {
-  width: 35px;
-}
-
 :root {
   --bg-color: white;
   --text-color: black;
   --header-line-color: #1D84B5;
   --header-line-height: 3rem;
   --main-color: #1D84B5;
+  --background: rgba(255, 255, 255, 0.29);
+  --background-dark: #b1b1b14a;
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.animation {
+  animation: ani 1.3s ease-in-out forwards;
+}
+
+@keyframes ani {
+  40% {
+    margin-top: 40vh;
+    margin-bottom: 50vh;
+  }
+  100% {
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+  }
 }

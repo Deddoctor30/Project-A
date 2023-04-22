@@ -4,16 +4,19 @@
 // @import url(../fonts//Nekst/black/style.css);
 // @import url(../fonts//Nekst/regular/style.css);
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
 // ___________________________________________________________________________
 
 
 // _________________________________Переходы____________________________________
 
 
-* {
-   transition: 0.2s all ease 0s;
-}
+// * {
+//    transition: 0.2s all ease 0s;
+// }
 
 // ____________________________Дефолтные настройки______________________________
 
@@ -80,4 +83,14 @@ html, body {
 .link {
    text-decoration: underline;
    color: lightblue;
+}
+
+.title {
+   @include style (2.5rem, 140%);
+   letter-spacing: 1.6px;
+   margin-top: 40vh;
+   margin-bottom: 50vh;
+   font-family: 'Russo One', sans-serif;
+   text-align: center;
+
 }

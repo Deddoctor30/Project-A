@@ -1,11 +1,7 @@
 // @import "../base";
 
 .competition {
-   margin-top: 80px;
-   margin-bottom: 100px;
 		&__title {
-         @include style (1.5rem, 100%);
-         margin-bottom: 20px;
 		}
 
 		&__calendar {

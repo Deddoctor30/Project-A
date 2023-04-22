@@ -1,7 +1,6 @@
 // @import "../base";
 
 .articles {
-   margin-top: 80px;
 		&__text {
          @include style (1.125rem, 140%);
          word-spacing: 2px;
