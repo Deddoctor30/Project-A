@@ -13,6 +13,20 @@ const competition = () => {
    monthName.textContent = `${monthNames[month]} `;
    yearName.textContent = year;
 
+   const colorChanger = () => {
+      const newData = document.querySelectorAll('td');
+      const switcher = document.querySelector('.switcher__input');
+      if (switcher.hasAttribute('checked')) {
+         newData.forEach(item => {
+            item.classList.add(`mainMonthDark`)
+         })
+      } else {
+         newData.forEach(item => {
+            item.classList.add(`mainMonth`)
+         })
+      }
+   }
+
    const arrowNext = () => {
       arrNext.addEventListener('click', () => {
          const tableRow = document.querySelectorAll('.tableRow')
@@ -27,7 +41,7 @@ const competition = () => {
             monthName.textContent = `${monthNames[month]} `;
          }
          createNet(year, month)
-         // console.log(month);
+         colorChanger();
       })
    }
 
@@ -47,6 +61,7 @@ const competition = () => {
             monthName.textContent = `${monthNames[month]} `;
          }
          createNet(year, month)
+         colorChanger();
       })
    }
 
@@ -71,7 +86,7 @@ const competition = () => {
                const b = new Date(`${year}-${month + 1}-1`)
                const dayOfWeek = b.getDay();
                b.setDate(b.getDate() - (dayOfWeek !== 0 ? dayOfWeek - 1 : 6) + g);
-               newData.textContent = b.getDate();
+               newData.textContent = b.getDate();            
                b.getMonth() === month ? newData.classList.add(`mainMonth`) : null;
                if (g === 6) {
                   a = document.querySelector(`.tableData-${i}-6`).innerHTML
@@ -105,6 +120,8 @@ const competition = () => {
    createNet(year, month)
 
 
+
+   colorChanger()
 }
 
 export default competition

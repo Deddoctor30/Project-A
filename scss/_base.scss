@@ -4,86 +4,66 @@
 // @import url(../fonts//Nekst/black/style.css);
 // @import url(../fonts//Nekst/regular/style.css);
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
 // ___________________________________________________________________________
 
 
 // _________________________________Переходы____________________________________
 
 
-* {
-   transition: 0.3s all ease 0s;
-}
+// * {
+//    transition: 0.2s all ease 0s;
+// }
 
 // ____________________________Дефолтные настройки______________________________
 
 html, body {
+   position: relative;
    font-family: 'Roboto', sans-serif;
 	font-size: 16px;
    line-height: 1;
    font-weight: 400;
-	color: black;
+	color: var(--text-color);
+   z-index: 5;
 }
 
 // _____________________________SCSS переменные________________________________
 
 
-@mixin style($fz, $lh, $c) {
+@mixin style($fz, $lh) {
    font-size: $fz;
    line-height: $lh;
-   color: $c;
 }
 
-$header_line_color: #bedce7;
-$header_line_height: 3rem;
-
-$font_color_dark: #ffffff;
-$font_color_light: #000000;
-
-$main_color: #FF9514;
-$second_color: #FF9514;
-
-
-// __________________________________Кнопки_______________________________________
-
-
-
-// .btn {
-//    height: 68px;
-
-//    @include style(1.875rem, 2.25rem, $font_color_dark);
-//    font-family: 'Nekst-Black';
-//    font-style: normal;
-//    font-weight: 900;
-//    color: #FFFFFF;
-//    background: $main_color;
-//    &_long {
-//       border-radius: 40px;
-//       width: 426px;
-//    }
-//    &:hover {
-//       background: $font_color_dark_second;
-//    }
-//    :active {
-//       background: $font_color_light;
-//    }
-// }
-
-// .btn-disabled {
-//    background: rgba(255, 149, 20, 0.4);
-// }
-
-
-
-// __________________________Тело_____________________________________
 
 
 .wrapper {
    min-height: 100%;
    overflow: hidden;
+   background-color: var(--bg-color);
+
+   // bg picture
+   &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-size:cover;
+      width: 100%;
+      height: 100%;
+      background: url(../img/bg/bg.jpg) no-repeat;
+      background-size: cover;
+      z-index: -5;
+      filter: opacity(15%) blur(4px) brightness(50%);
+   }
+
 }
 
 .container {
+   position: relative;
    //_________________Ширина контейнера_________________
    max-width: 1170px;
 
@@ -93,6 +73,7 @@ $second_color: #FF9514;
    //_____________________Отступ безопасности_____________________
    padding: 0px 15px;
    box-sizing: content-box;
+   z-index: 50;
 }
 
 .hide {
@@ -105,5 +86,11 @@ $second_color: #FF9514;
 }
 
 .title {
+   @include style (2.5rem, 140%);
+   letter-spacing: 1.6px;
+   margin-top: 40vh;
+   margin-bottom: 50vh;
+   font-family: 'Russo One', sans-serif;
+   text-align: center;
 
 }

@@ -1,22 +1,24 @@
-@import "../base";
 
    .footer{
-      margin-top: 100px;
-      background: $header_line_color;
-      padding:30px 0px;
+
+
+
+      border-top: 2px solid white;
+      margin-top: 50px;
+      background: var(--header-line-color);
+      padding: 0px 0px 10px 0px;
       text-align:center;
+      color: white;
 
       &__row {
          width:100%;
-         margin:1% 0%;
-         padding:0.6% 0%;
-         color:gray;
-         font-size:0.8em;
+         margin: 40px 0px;
+         // padding:0.6% 0%;
+         font-size: 0.8em;
       }
 
       &__item {
          text-decoration:none;
-         color:gray;
          transition: all ease 0.1;
          i {
             font-size:2em;
@@ -35,22 +37,20 @@
          display:inline-block;
          margin:0px 30px;
       }
+
+
+      &__rights {
+         margin: 40px 0px 20px 0px;
+         font-size: 0.8rem;
+      }
+
    }
    
-
-
-   
-   // @media (max-width:720px){
-   // .footer{
-   // text-align:left;
-   // padding:5%;
-   // }
-   // .footer .row ul li{
-   // display:block;
-   // margin:10px 0px;
-   // text-align:left;
-   // }
-   // .footer .row a i{
-   // margin:0% 3%;
-   // }
-   // }
+   .end {
+      font-size: 1.4rem;
+      font-family: 'Dancing Script', cursive;
+      span {
+         font-family: 'Roboto', sans-serif;
+         font-size: 0.8rem;
+      }
+   }

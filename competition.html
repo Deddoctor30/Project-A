@@ -16,27 +16,49 @@
       <header class="header">
          <div class="header__line">
             <div class="header__content">
-               <ul class="header__items">
-                  <li class="header__item"><a href="./index.html">Главная страница</a></li>
-                  <li class="header__item"><a href="./coaches.html">Тренеры клуба</a></li>
-                  <li class="header__item"><a href="./information.html">Информация</a></li>
-                  <li class="header__item"><a href="./competition.html">Календарь соревнований</a></li>
-                  <li class="header__item"><a href="./clinical.html">Диспансеризация</a></li>
-                  <li class="header__item"><a href="./articles.html">Статьи</a></li>
-                  <li class="header__item"><a href="./about.html">О нас</a></li>
-               </ul>
-               <div class="header__auth">
-                  <ul class="header__items">
-                     <li class="header__item"><a href="#">Личный кабинет</a></li>
-                  </ul>
+               <div class="header__items">
+                  <div class="header__item"><a class="header__link" href="./index.html">Главная страница</a></div>
+                  
+                  
+                  <div class="header__item info">
+                     <div class="info__item header__item"><p class="header__link" id="info-trigger">Информация</p></div>
+                     <div class="info__inner">
+                        <div class="info__item header__item"><a id="info-trigger" href="./information.html">Информация</a></div>
+                        <div class="info__item header__item"><a href="./coaches.html">Тренеры клуба</a></div>
+                        <div class="info__item header__item"><a href="./competition.html">Календарь соревнований</a></div>
+                     </div>
+                  </div>
+
+
+                  <div class="header__item"><a class="header__link" href="./achievements.html">Последние достижения</a></div>
+                  <div class="header__item"><a class="header__link" href="./clinical.html">Диспансеризация</a></div>
+                  <div class="header__item"><a class="header__link" href="./articles.html">Статьи</a></div>
+                  <div class="header__item"><a class="header__link" href="./about.html">О нас</a></div>
                </div>
+
+
+               <div class="header__auth">
+                  <div class="header__items auth">
+                     <div class="header__item auth__item"><p class="header__link" id="auth-trigger">Настройки</p></div>
+                     <div class="header__inner auth__inner">
+                        <div class="switcher">
+                           <p class="switcher__text header__link">Сменить тему</p>
+                           <input class="switcher__input" type="checkbox" id="switch" />
+                           <label for="switch">Toggle</label>
+                        </div>
+                        <div class="header__item auth__item"><a href="#">Войти</a></div>
+                     </div>
+                  </div>
+               </div>
+
+
             </div>
          </div>
       </header>
 
       <div class="container">
          <section class="competition">
-            <h1 class="competition__title">Календарь соревнований</h1>
+            <h1 class="competition__title title animation">Календарь соревнований</h1>
             <div class="competition__calendar calendar">
                <div class="calendar__wrapper">
                   <table class="calendar__table">
@@ -64,7 +86,6 @@
                     </tbody>  
 
                   </table>
-                  <script src="../dist/js/bundle.js"></script>
                </div>
             </div>
          </section>
@@ -78,20 +99,28 @@
          </div>
          
          <div class="footer__row">
-            <ul class="footer__items">
+            <ul class="footer__items footer__contacts">
                <li class="footer__visit"><a href="#">Написать нам</a></li>
-               <li class="footer__visit"><a href="#">Our Services</a></li>
-               <li class="footer__visit"><a href="#">Privacy Policy</a></li>
-               <li class="footer__visit"><a href="#">Terms & Conditions</a></li>
-               <li class="footer__visit"><a href="#">Career</a></li>
+               <li class="footer__visit"><a href="tel:+99999999">Tel: +7 (495) 174-15-85</a></li>
+               <li class="footer__visit"><a href="#">Контакт №1</a></li>
+               <li class="footer__visit"><a href="#">Контакт №2</a></li>
             </ul>
          </div>
          
          <div class="footer__row">
-            Тут что-то будет написано 
+            <ul class="footer__items">
+            </ul>
+         </div>
+         <div class="footer__row footer__rights">
+            <ul class="footer__items">
+               <li class="footer__visit"><a href="#">Политика конфиденциальности</a></li>
+               <li class="footer__visit"><a href="#">Условия использования</a></li>
+               <li class="footer__visit end">by NovikovV  <span>© 2023</span></span></li>
+            </ul>
          </div>
       </footer>
    </div>
    <script src="./js/bundle.js"></script>
+   <!-- <script src="../dist/js/bundle.js"></script> -->
 </body>
 </html>

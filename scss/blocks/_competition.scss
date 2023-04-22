@@ -1,11 +1,7 @@
-@import "../base";
+// @import "../base";
 
 .competition {
-   margin-top: 80px;
-   margin-bottom: 100px;
 		&__title {
-         @include style (1.5rem, 100%, $font_color_light);
-         margin-bottom: 20px;
 		}
 
 		&__calendar {
@@ -28,7 +24,7 @@
          text-align: left;
          border: 1px solid #e2e8f0;
          padding: 15px;
-         @include style (1.375rem, 100%, $font_color_light);
+         @include style (1.375rem, 100%);
          font-weight: 700;
       }
 
@@ -73,7 +69,8 @@ td {
    vertical-align: top;
    text-align: center;
    &:hover {
-      background-color: rgba(173, 216, 230, 0.341);
+      background-color: rgba(47, 47, 47, 0.341);
+      background-color: #171717;
    }
 }
 
@@ -83,6 +80,9 @@ td {
 
 .mainMonth {
    color: rgb(16, 17, 19);
+}
+.mainMonthDark {
+   color: rgb(255, 255, 255);
 }
 .notMainMonth {
    color: rgb(160, 174, 192);

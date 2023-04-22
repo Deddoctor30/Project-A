@@ -1,21 +1,20 @@
-@import "../base";
+// @import "../base";
 
 .clinical {
-	margin-top: 80px;
 		&__title {
-			@include style (2rem, 140%, $font_color_light);
-			margin-bottom: 20px;
+
 		}
 
 		&__about {
-         @include style (1.5rem, 100%, $font_color_light);
+         @include style (1.5rem, 100%);
 
 		}
 
 		&__responsibility {
 			margin-top: 50px;
 			h2 {
-				@include style (1.125rem, 100%, red);
+				@include style (1.125rem, 100%);
+				color: red;
 			}
 		}
 
@@ -42,6 +41,7 @@
       margin-right: 20px;
 
       span {
+			font-size: 2rem;
          width: 80px;
          text-align: center;
       }
@@ -49,10 +49,14 @@
 
 	&__items {
 		margin-left: 20px;
+		// background-color: #e8e8e825;
+		background-color: rgba(177, 177, 177, 0.2901960784);
+		padding: 15px 40px;
 	}
 	&__item {
 		list-style: decimal;
 		line-height: 160%;
+
 		&::first-letter {
 			text-transform: capitalize;
 
@@ -63,7 +67,7 @@
 .people {
 	margin-top: 50px;
 		&__available-title {
-			@include style (1.5rem, 100%, $font_color_light);
+			@include style (1.5rem, 100%);
 			margin-bottom: 20px;
 		}
 
@@ -90,7 +94,7 @@
 		}
 
 		&__overdue-title{
-			@include style (1.5rem, 100%, $font_color_light);
+			@include style (1.5rem, 100%);
 			margin-bottom: 20px;
 		}
 
