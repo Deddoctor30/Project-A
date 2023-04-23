@@ -80,6 +80,11 @@ html, body {
    display: none;
 }
 
+.visible {
+   visibility: visible;
+   opacity: 1;
+}
+
 .link {
    text-decoration: underline;
    color: lightblue;

@@ -132,6 +132,11 @@ html, body {
   display: none;
 }
 
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 .link {
   text-decoration: underline;
   color: lightblue;
@@ -272,6 +277,28 @@ input:checked + label:after {
 
 label:active:after {
   width: 35px;
+}
+
+.upArrow {
+  transition: all 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
+  color: black;
+  position: fixed;
+  top: 88vh;
+  right: 8vw;
+  cursor: pointer;
+}
+.upArrow span::before {
+  content: "";
+  background-image: url(/src/img/header/upArrow2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 45px;
+  height: 45px;
+  width: 45px;
+  top: 0px;
+  left: 0px;
 }
 
 .main__logo {
@@ -452,6 +479,11 @@ html, body {
   display: none;
 }
 
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 .link {
   text-decoration: underline;
   color: lightblue;
@@ -558,6 +590,11 @@ html, body {
 
 .hide {
   display: none;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .link {
@@ -714,10 +751,10 @@ td {
   color: rgb(160, 174, 192);
   vertical-align: top;
   text-align: center;
+  transition: all 0.5s ease;
 }
 td:hover {
-  background-color: rgba(47, 47, 47, 0.341);
-  background-color: #171717;
+  background-color: rgba(29, 133, 181, 0.0705882353);
 }
 
 .tableData {
@@ -734,6 +771,12 @@ td:hover {
 
 .notMainMonth {
   color: rgb(160, 174, 192);
+}
+
+.currentDay {
+  background-color: rgba(240, 128, 128, 0.35);
+  border-radius: 100%;
+  padding: 20px;
 }
 
 .articles__text {

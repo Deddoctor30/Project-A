@@ -55,6 +55,11 @@ var bgSwitcher = function bgSwitcher() {
       footer.style.setProperty('--header-line-color', '#1D84B5');
       info.style.setProperty('--header-line-color', '#1D84B5');
       switcher.removeAttribute('checked');
+      if (document.querySelector('.mainMonth')) {
+        document.querySelectorAll('.mainMonth').forEach(function (item) {
+          item.style.cssText = 'color: black';
+        });
+      }
     }
   }
   themeChanger();
@@ -98,6 +103,8 @@ var competition = function competition() {
   var date = new Date();
   var year = date.getFullYear();
   var month = date.getMonth();
+  var day = date.getDate();
+  console.log(month);
   var monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
   monthName.textContent = "".concat(monthNames[month], " ");
   yearName.textContent = year;
@@ -106,11 +113,9 @@ var competition = function competition() {
     var switcher = document.querySelector('.switcher__input');
     if (switcher.hasAttribute('checked')) {
       newData.forEach(function (item) {
-        item.classList.add("mainMonthDark");
-      });
-    } else {
-      newData.forEach(function (item) {
-        item.classList.add("mainMonth");
+        if (item.classList.contains('mainMonth')) {
+          item.classList.add('mainMonthDark');
+        }
       });
     }
   };
@@ -165,46 +170,155 @@ var competition = function competition() {
       // Первая строка
       if (i === 0) {
         for (var g = 0; g < 7; g++) {
+          var newSpan = document.createElement('span');
           var newData = document.createElement('td');
           newData.classList.add("tableData-".concat(i, "-").concat(g));
           newData.classList.add("tableData");
+          newSpan.classList.add("tableSpan");
+          newData.append(newSpan);
           newRow.append(newData);
           // Логика
           var b = new Date("".concat(year, "-").concat(month + 1, "-1"));
           var dayOfWeek = b.getDay();
           b.setDate(b.getDate() - (dayOfWeek !== 0 ? dayOfWeek - 1 : 6) + g);
-          newData.textContent = b.getDate();
+          newSpan.textContent = b.getDate();
           b.getMonth() === month ? newData.classList.add("mainMonth") : null;
           if (g === 6) {
-            a = document.querySelector(".tableData-".concat(i, "-6")).innerHTML;
+            a = document.querySelector(".tableData-".concat(i, "-6")).textContent; // +++
           }
         }
       } else {
         // Отсальные строки
         for (var j = 0; j < 7; j++) {
+          var _newSpan = document.createElement('span');
           var _newData = document.createElement('td');
           _newData.classList.add("tableData-".concat(i, "-").concat(j));
           _newData.classList.add("tableData");
+          _newSpan.classList.add("tableSpan");
+          _newData.append(_newSpan);
           newRow.append(_newData);
           // Логика
           var _b = new Date("".concat(year, "-").concat(month + 1, "-").concat(+a + 1));
           _b.setDate(_b.getDate() + j);
-          _newData.textContent = isNaN(_b.getDate()) === false ? _b.getDate() : '-';
+          _newSpan.textContent = isNaN(_b.getDate()) === false ? _b.getDate() : '-';
           _b.getMonth() === month ? _newData.classList.add("mainMonth") : null;
           var monthOff = document.querySelector(".tableData-".concat(i - 1, "-6"));
           if (monthOff && !monthOff.classList.contains('mainMonth')) {
             _newData.classList.add("notMainMonth");
           }
           if (j === 6) {
-            a = document.querySelector(".tableData-".concat(i, "-6")).innerHTML;
+            a = document.querySelector(".tableData-".concat(i, "-6")).textContent;
           }
+
+          // новое
+          if (+_newSpan.textContent === +day && date.getMonth() === month) {
+            _newSpan.classList.add("currentDay");
+          }
+          // if (+newSpan.textContent === +day && monthName.textContent === month) {
+          //    console.log(month);
+          //    newSpan.classList.add(`currentDay`);
+          // }
         }
       }
     }
+
+    colorChanger();
   };
   createNet(year, month);
-  colorChanger();
+  //------------------------------------------------------------------------------------
+  // const arrowNext = () => {
+  //    arrNext.addEventListener('click', () => {
+  //       const tableRow = document.querySelectorAll('.tableRow')
+  //       tableRow.forEach(i => i.remove())
+  //       if (month > 10) {
+  //          year++;
+  //          month = 0;
+  //          yearName.textContent = year;
+  //          monthName.textContent = `${monthNames[month]} `;
+  //       } else {
+  //          month++;
+  //          monthName.textContent = `${monthNames[month]} `;
+  //       }
+  //       createNet(year, month)
+  //    })
+  // }
+
+  // arrowNext()
+
+  // const arrowPrev = () => {
+  //    arrPrev.addEventListener('click', () => {
+  //       const tableRow = document.querySelectorAll('.tableRow')
+  //       tableRow.forEach(i => i.remove())
+  //       if (month < 1) {
+  //          year--;
+  //          month = 11;
+  //          yearName.textContent = year;
+  //          monthName.textContent = `${monthNames[month]} `;
+  //       } else {
+  //          month--;
+  //          monthName.textContent = `${monthNames[month]} `;
+  //       }
+  //       createNet(year, month)
+  //    })
+  // }
+
+  // arrowPrev()
+
+  // const createNet = (year, month) => {
+  //    let a = 0;
+  //    for(let i = 0; i < 6; i++) {
+  //       const newRow = document.createElement('tr')
+  //       newRow.classList.add(`tableRow-${i}`)
+  //       newRow.classList.add(`tableRow`)
+  //       tableBody.append(newRow)
+
+  //       // Первая строка
+  //       if (i === 0) {
+  //          for(let g = 0; g < 7; g++) {
+  //             const newData = document.createElement('td')
+  //             newData.classList.add(`tableData-${i}-${g}`);
+  //             newData.classList.add(`tableData`);
+  //             newRow.append(newData)
+  //             // Логика
+  //             const b = new Date(`${year}-${month + 1}-1`)
+  //             const dayOfWeek = b.getDay();
+  //             b.setDate(b.getDate() - (dayOfWeek !== 0 ? dayOfWeek - 1 : 6) + g);
+  //             newData.textContent = b.getDate();            
+  //             b.getMonth() === month ? newData.classList.add(`mainMonth`) : null;
+  //             if (g === 6) {
+  //                a = document.querySelector(`.tableData-${i}-6`).innerHTML
+  //             }
+  //          }
+  //       } else {
+  //          // Отсальные строки
+  //          for(let j = 0; j < 7; j++) {
+  //             const newData = document.createElement('td')
+  //             newData.classList.add(`tableData-${i}-${j}`)
+  //             newData.classList.add(`tableData`)
+  //             newRow.append(newData)
+  //             // Логика
+  //             const b = new Date(`${year}-${month + 1}-${+a + 1}`)
+  //             b.setDate(b.getDate() + j);
+
+  //             newData.textContent = isNaN(b.getDate()) === false ? b.getDate() : '-';
+
+  //             b.getMonth() === month ? newData.classList.add(`mainMonth`) : null;
+  //             const monthOff = document.querySelector(`.tableData-${i - 1}-6`);
+  //             if (monthOff && !monthOff.classList.contains('mainMonth')) {
+  //                newData.classList.add(`notMainMonth`);
+  //             }
+  //             if (j === 6) {
+  //                a = document.querySelector(`.tableData-${i}-6`).innerHTML
+  //             }
+  //          }
+  //       }
+  //    }
+  // }
+
+  // createNet(year, month)
+  //------------------------------------------------------------------------------------
 };
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (competition);
 
 /***/ }),
@@ -294,6 +408,42 @@ var main = function main() {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (main);
+
+/***/ }),
+
+/***/ "./src/js/modules/scrollBtn.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/scrollBtn.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var scrollBtn = function scrollBtn() {
+  var upArrow = document.querySelector('.upArrow');
+  function setScrollTo(top, left) {
+    window.scrollTo({
+      top: top,
+      left: left,
+      behavior: 'smooth'
+    });
+  }
+  upArrow.addEventListener('click', function () {
+    setScrollTo(0, 0);
+  });
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 199) {
+      upArrow.classList.add('visible');
+    }
+    if (window.pageYOffset < 199) {
+      upArrow.classList.remove('visible');
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollBtn);
 
 /***/ }),
 
@@ -13851,6 +14001,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_competition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/competition */ "./src/js/modules/competition.js");
 /* harmony import */ var _modules_bgSwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/bgSwitcher */ "./src/js/modules/bgSwitcher.js");
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js");
+/* harmony import */ var _modules_scrollBtn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scrollBtn */ "./src/js/modules/scrollBtn.js");
+
 
 
 
@@ -13862,6 +14014,7 @@ window.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('.competition__calendar')) {
     (0,_modules_competition__WEBPACK_IMPORTED_MODULE_1__["default"])();
   }
+  (0,_modules_scrollBtn__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 })();
 
