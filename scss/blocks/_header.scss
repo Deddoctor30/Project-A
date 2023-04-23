@@ -172,3 +172,27 @@
   label:active:after {
     width: 35px;
   }
+
+.upArrow {
+   transition: all 0.5s ease;
+   visibility: hidden;
+   opacity: 0;
+   color: black;
+   position: fixed;
+   top: 88vh;
+   right: 8vw;
+   cursor: pointer;
+   span {
+      &::before {
+         content: "";
+         background-image: url(/src/img/header/upArrow2.png);
+         background-repeat: no-repeat;
+         position: absolute;
+         background-size: 45px;  
+         height: 45px;
+         width: 45px;
+         top: 0px;
+         left: 0px;
+      }
+   }
+}

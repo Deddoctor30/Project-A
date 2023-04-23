@@ -39,6 +39,11 @@ const bgSwitcher = () => {
          footer.style.setProperty('--header-line-color', '#1D84B5')
          info.style.setProperty('--header-line-color', '#1D84B5');
          switcher.removeAttribute('checked')
+         if (document.querySelector('.mainMonth')) {
+            document.querySelectorAll('.mainMonth').forEach(item => {
+               item.style.cssText = 'color: black'
+            })
+         }
       }
    }
 
