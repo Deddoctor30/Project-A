@@ -27,6 +27,7 @@ var bgSwitcher = function bgSwitcher() {
   var header = document.querySelector('.header__line');
   var footer = document.querySelector('.footer');
   var info = document.querySelector('.info__inner');
+  var burgerBg = document.querySelector('.burger__content');
   switcher.addEventListener('click', function () {
     if (localStorage.getItem('bg') === 'changed') {
       localStorage.removeItem('bg');
@@ -42,6 +43,7 @@ var bgSwitcher = function bgSwitcher() {
       header.style.setProperty('--header-line-color', '#171717');
       footer.style.setProperty('--header-line-color', '#171717');
       info.style.setProperty('--header-line-color', 'black');
+      burgerBg.style.setProperty('--header-line-color', 'black');
       if (document.querySelector('.mainMonth')) {
         document.querySelectorAll('.mainMonth').forEach(function (item) {
           item.style.cssText = 'color: white';
@@ -54,6 +56,7 @@ var bgSwitcher = function bgSwitcher() {
       header.style.setProperty('--header-line-color', '#1D84B5');
       footer.style.setProperty('--header-line-color', '#1D84B5');
       info.style.setProperty('--header-line-color', '#1D84B5');
+      burgerBg.style.setProperty('--header-line-color', '#1D84B5');
       switcher.removeAttribute('checked');
       if (document.querySelector('.mainMonth')) {
         document.querySelectorAll('.mainMonth').forEach(function (item) {
