@@ -7,6 +7,9 @@ const header = () => {
    const authInner = document.querySelector('.auth__inner');
    const authBlock = document.querySelector('.auth');
 
+
+
+   // Расширения хедера
    if (infoTrigger) {
       infoTrigger.addEventListener('mouseover', () => {
          infoInner.style.cssText = 'top: 70px'

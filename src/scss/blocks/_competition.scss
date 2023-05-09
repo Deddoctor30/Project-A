@@ -8,7 +8,9 @@
 		}
 }
 .calendar {
-
+   @media(max-width: 440px) {
+      @include style (0.75rem, 100%);
+   }
 		&__wrapper {
          box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 		}
@@ -53,16 +55,27 @@
          margin-top: 20px;
          color: rgb(82, 90, 100);
       }
+
+      &__long {
+         @media(max-width: 1199px) {
+            display: none;
+         }
+      }
+      &__short {
+         @media(min-width: 1200px) {
+            display: none;
+         }
+      }
 }
 
 th {
    padding: 1rem;
-   // width: 2.5rem;
+   width: 14.2%;
    border: 1px solid #e2e8f0;
 }
 
 td {
-   width: 167px;
+   // width: 10%;
    height: 10rem;
    border: 1px solid #e2e8f0;
    color: rgba(160,174,192);

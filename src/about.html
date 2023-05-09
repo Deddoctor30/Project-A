@@ -44,15 +44,41 @@
                         <div class="switcher">
                            <p class="switcher__text header__link">Сменить тему</p>
                            <input class="switcher__input" type="checkbox" id="switch" />
-                           <label for="switch">Toggle</label>
+                           <label class="switcher__label" for="switch">Toggle</label>
                         </div>
-                        <div class="header__item auth__item"><a href="#">Войти</a></div>
+                        <div id="singIn" class="header__item auth__item"><a href="#">Войти</a></div>
                      </div>
                   </div>
                </div>
-               <div class="upArrow"><span id="upArrow"></span></div>
+               
+            </div>
 
-
+         </div>
+         <div class="upArrow"><span id="upArrow"></span></div>
+   
+         <div class="header__burger burger">
+            <div class="burger__content">
+               <div class="burger__item"><a href="./index.html">Главная страница</a></div>
+               <div class="burger__item"><a id="info-trigger" href="./information.html">Информация</a></div>
+               <div class="burger__item"><a href="./coaches.html">Тренеры клуба</a></div>
+               <div class="burger__item"><a href="./competition.html">Календарь соревнований</a></div>
+               <div class="burger__item"><a href="./achievements.html">Последние достижения</a></div>
+               <div class="burger__item"><a href="./clinical.html">Диспансеризация</a></div>
+               <div class="burger__item"><a href="./articles.html">Статьи</a></div>
+               <div class="burger__item"><a href="./about.html">О нас</a></div>
+               <div class="switcher">
+                  <p class="switcher__text header__link">Сменить тему</p>
+                  <input class="switcher__input" type="checkbox" id="switch" />
+                  <label class="switcher__label" for="switch">Toggle</label>
+               </div>
+            </div>
+            <div class="burger__trigger">
+               <div class="burger__icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
             </div>
          </div>
       </header>
@@ -66,7 +92,7 @@
                Тренировки проходят в небольшом, но уютном спортивном зале. Там же мы устраиваем чаепития по особо торжественным дням (присвоение спортивного разряда, победы на соревнованиях ...). Мы много выступаем на соревнованиях как городского масштаба, так и на Всероссийских и Международных турнирах. Из нашего клуба вышло немало КАНДИДАТОВ В МАСТЕРА СПОРТА РОССИИ  и МАСТЕРОВ СПОРТА РОССИИ. 
                <br>
                <br>
-               А преподают нам искусство ФЕХТОВАНИЯ добрые и заботливые тренеры: Иванов Владимир Геннадьевич, Иванова Светлана Юрьевна, Иванова Екатерина Владимировна и Кротов Алексей Леонидович. 
+               А преподают нам искусство ФЕХТОВАНИЯ добрые и заботливые тренеры: <a class="link" href="./coach.html">Иванов Владимир Геннадьевич</a>, <a class="link" href="./coach.html">Иванова Светлана Юрьевна</a>, <a class="link" href="./coach.html">Иванова Екатерина Владимировна</a> и <a class="link" href="./coach.html">Кротов Алексей Леонидович</a>. 
                <br>
                <br>
                Летом мы выезжаем в спортивно-оздоровительные лагеря, где совершенствуем своё мастерство по фехтованию, а заодно плаваем, играем в футбол, волейбол, пионербол, ездим на экcкурсии. 
@@ -74,37 +100,36 @@
                <br>
                На соревнованиях мы представляем специализированную детско-юношескую спортивную школу Олимпийского резерва "КШВСМ" (Комплексная Школа Высшего Спортивного Мастерства). Перед нами большие перспективы и возможности. Вплоть до ОЛИМПИЙСКИХ ИГР.
             </p>
-            <div class="about__attention">
-               <div class="about__sign">
-                  <span>!</span>
+            <div class="about__attention attention">
+               <h2 class="attention__title">Внимание!</h2>
+               <div class="attention__inner">
+                  <div class="attention__sign">
+                     <span>!</span>
+                  </div>
+                  <ul class="attention__items">
+                     <li class="attention__item">Мы всегда готовы принять в наши ряды желающих заниматься нелегким искусством - фехтованием на шпагах</li>
+                     <li class="attention__item">В этом году идёт набор в младшую и среднюю группы - это дети со 2 по 6 класс</li>
+                     <li class="attention__item">Запись в группу -  по адресу: <a class="link" target="_blank" href='https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_podkovyrova_20/Z0kYdQdiS0wCQFtjfXV3dX5kYw==/?from=mapframe&ll=30.302295%2C59.964278&z=17'>ул. Подковырова 20</a>, подростковый клуб "Старт" (с собой желательно иметь спортивную форму)</li>
+                     <li class="attention__item">Телефон: <a class="link" href="tel: 2331668">233-16-68</a></li>
+                     <li class="attention__item">(понедельник, среда, пятница с 15.00 до 20.00)</li>
+                  </ul>
                </div>
-               <p>
-                  Внимание!
-                  <br>
-                  Мы всегда готовы принять в наши ряды желающих заниматься нелегким искусством - фехтованием на шпагах.
-                  <br>
-                  В этом году идёт набор в младшую и среднюю группы - это дети со 2 по 6 класс.
-                  <br>
-                  Запись в группу -  по адресу: <a class="link" target="_blank" href='https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_podkovyrova_20/Z0kYdQdiS0wCQFtjfXV3dX5kYw==/?from=mapframe&ll=30.302295%2C59.964278&z=17'>ул. Подковырова 20</a>, подростковый клуб "Старт". (с собой желательно иметь спортивную форму)
-                  <br>
-                  Телефон: <a class="link" href="tel: 2331668">233-16-68</a>
-                  <br>
-                  (понедельник, среда, пятница с 15.00 до 20.00)
-               </p>
             </div>
             <div class="about__map map">
-               <div class="map__title">Как нас найти:</div>
+               <div class="map__title">Как нас найти</div>
                <div class="map__content">
                   <div style="position:relative;overflow:hidden;">
                      <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
                      <a href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_podkovyrova_20/Z0kYdQdiS0wCQFtjfXV3dX5kYw==/?ll=30.302295%2C59.964278&utm_medium=mapframe&utm_source=maps&z=17.12" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Подковырова, 20 — Яндекс Карты</a>
-                     <iframe src="https://yandex.ru/map-widget/v1/?ll=30.302295%2C59.964278&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQzMDgyMxJS0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0YPQu9C40YbQsCDQn9C-0LTQutC-0LLRi9GA0L7QstCwLCAyMCIKDRtr8kEVbNtvQg%2C%2C&z=17.12" width="1000" height="560" frameborder="1" allowfullscreen="true" style="position:relative;">
+                     <iframe src="https://yandex.ru/map-widget/v1/?ll=30.302295%2C59.964278&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQzMDgyMxJS0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0YPQu9C40YbQsCDQn9C-0LTQutC-0LLRi9GA0L7QstCwLCAyMCIKDRtr8kEVbNtvQg%2C%2C&z=17.12" width="80%" height="560"  frameborder="1" allowfullscreen="true" style="position:relative;">
                      </iframe>
                   </div>
                </div>
             </div>
          </section>
       </div>
+
+
       <footer class="footer">
          <div class="footer__row">
             <a class="footer__item" href="#"><i class="fa fa-facebook"></i></a>
@@ -114,18 +139,14 @@
          </div>
          
          <div class="footer__row">
-            <ul class="footer__items footer__contacts">
+            <ul class="footer__items">
                <li class="footer__visit"><a href="#">Написать нам</a></li>
                <li class="footer__visit"><a href="tel:+99999999">Tel: +7 (495) 174-15-85</a></li>
                <li class="footer__visit"><a href="#">Контакт №1</a></li>
                <li class="footer__visit"><a href="#">Контакт №2</a></li>
             </ul>
          </div>
-         
-         <div class="footer__row">
-            <ul class="footer__items">
-            </ul>
-         </div>
+
          <div class="footer__row footer__rights">
             <ul class="footer__items">
                <li class="footer__visit"><a href="#">Политика конфиденциальности</a></li>
@@ -134,8 +155,25 @@
             </ul>
          </div>
       </footer>
+
+
    </div>
-   <script src="./js/bundle.js"></script>
-   <!-- <script src="../dist/js/bundle.js"></script> -->
+
+   <div id="popup" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <h2 class="popup__title">Войти в админ панель</h2>
+            <span href="#" class="popup__close">X</span>
+            <form class="popup__form" action="">
+               <input class="popup__input" name="pass" type="password" placeholder="Name" required id="pass" autocomplete="off">
+               <label class="popup__label" for="pass">Пароль</label>
+               <button class="popup__btn">Войти</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!-- <script src="./js/bundle.js"></script> -->
+   <script src="../dist/js/bundle.js"></script>
 </body>
 </html>

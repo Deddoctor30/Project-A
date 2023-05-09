@@ -44,15 +44,41 @@
                         <div class="switcher">
                            <p class="switcher__text header__link">Сменить тему</p>
                            <input class="switcher__input" type="checkbox" id="switch" />
-                           <label for="switch">Toggle</label>
+                           <label class="switcher__label" for="switch">Toggle</label>
                         </div>
-                        <div class="header__item auth__item"><a href="#">Войти</a></div>
+                        <div id="singIn" class="header__item auth__item"><a href="#">Войти</a></div>
                      </div>
                   </div>
                </div>
-               <div class="upArrow"><span id="upArrow"></span></div>
+               
+            </div>
 
-
+         </div>
+         <div class="upArrow"><span id="upArrow"></span></div>
+   
+         <div class="header__burger burger">
+            <div class="burger__content">
+               <div class="burger__item"><a href="./index.html">Главная страница</a></div>
+               <div class="burger__item"><a id="info-trigger" href="./information.html">Информация</a></div>
+               <div class="burger__item"><a href="./coaches.html">Тренеры клуба</a></div>
+               <div class="burger__item"><a href="./competition.html">Календарь соревнований</a></div>
+               <div class="burger__item"><a href="./achievements.html">Последние достижения</a></div>
+               <div class="burger__item"><a href="./clinical.html">Диспансеризация</a></div>
+               <div class="burger__item"><a href="./articles.html">Статьи</a></div>
+               <div class="burger__item"><a href="./about.html">О нас</a></div>
+               <div class="switcher">
+                  <p class="switcher__text header__link">Сменить тему</p>
+                  <input class="switcher__input" type="checkbox" id="switch" />
+                  <label class="switcher__label" for="switch">Toggle</label>
+               </div>
+            </div>
+            <div class="burger__trigger">
+               <div class="burger__icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
             </div>
          </div>
       </header>
@@ -101,7 +127,7 @@
                У тренеров сборных команд страны и регионов тоже работы непочатый край, а главное - на их плечи ложиться огромная ответственность перед страной «за результат», а это большая психологическая нагрузка. Поэтому все тренеры нашей страны, делающие,  в конце концов, общее дело, ведь без совместного труда «детских» тренеров и тренеров сборных команд у нас не будет ни здоровых граждан России, ни олимпийских чемпионов, достойны того, чтобы их педагогическая деятельность оценивалась по выполненной работе и принесенной ПОЛЬЗЕ стране. А у нас пока  - есть ДЕТИ, есть ТРЕНЕРЫ, ведется РАБОТА – нет КРИТЕРИЕВ, чтобы оценить ЭТОТ педагогический труд..........?!
             </p>
             <div class="articles__autor">
-               Тренер-преподаватель по фехтованию – <span>Иванова С.Ю.</span>
+               Тренер-преподаватель по фехтованию – <span><a href="./coach.html">Иванова С.Ю.</a></span>
                <br>
                <br>
                <br>
@@ -109,6 +135,8 @@
             </div>
          </section>
       </div>
+
+
       <footer class="footer">
          <div class="footer__row">
             <a class="footer__item" href="#"><i class="fa fa-facebook"></i></a>
@@ -118,18 +146,14 @@
          </div>
          
          <div class="footer__row">
-            <ul class="footer__items footer__contacts">
+            <ul class="footer__items">
                <li class="footer__visit"><a href="#">Написать нам</a></li>
                <li class="footer__visit"><a href="tel:+99999999">Tel: +7 (495) 174-15-85</a></li>
                <li class="footer__visit"><a href="#">Контакт №1</a></li>
                <li class="footer__visit"><a href="#">Контакт №2</a></li>
             </ul>
          </div>
-         
-         <div class="footer__row">
-            <ul class="footer__items">
-            </ul>
-         </div>
+
          <div class="footer__row footer__rights">
             <ul class="footer__items">
                <li class="footer__visit"><a href="#">Политика конфиденциальности</a></li>
@@ -138,8 +162,25 @@
             </ul>
          </div>
       </footer>
+
+
    </div>
-   <script src="./js/bundle.js"></script>
-   <!-- <script src="../dist/js/bundle.js"></script> -->
+
+   <div id="popup" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <h2 class="popup__title">Войти в админ панель</h2>
+            <span href="#" class="popup__close">X</span>
+            <form class="popup__form" action="">
+               <input class="popup__input" name="pass" type="password" placeholder="Name" required id="pass" autocomplete="off">
+               <label class="popup__label" for="pass">Пароль</label>
+               <button class="popup__btn">Войти</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!-- <script src="./js/bundle.js"></script> -->
+   <script src="../dist/js/bundle.js"></script>
 </body>
 </html>

@@ -39,10 +39,15 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      justify-content: center;
    }
 
    &__img {
       flex: 0 1 49%;
+
+      @media(max-width: 1050px) {
+         flex: 0 1 100%;
+      }
       img {
          width: 100%;
          height: 100%;

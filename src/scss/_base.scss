@@ -38,7 +38,17 @@ html, body {
    line-height: $lh;
 }
 
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+   $k: ($f-max - $f-min)/($v-max - $v-min);
+   $b: $f-min - $k * $v-min;
+ 
+   $b: $b * 1px;
+ 
+   @return calc( #{$k} * 100vw + #{$b} );
+ }
 
+
+ //___________________________________________________________
 
 .wrapper {
    min-height: 100%;
@@ -87,15 +97,27 @@ html, body {
 
 .link {
    text-decoration: underline;
-   color: lightblue;
+   color: var(--link);
 }
 
 .title {
+   padding-top: 60px;
    @include style (2.5rem, 140%);
    letter-spacing: 1.6px;
-   margin-top: 40vh;
+   margin-top: 50vh;
    margin-bottom: 50vh;
    font-family: 'Russo One', sans-serif;
    text-align: center;
 
+   @media (max-width: 980px) {
+      padding-top: 40px;
+   }
+
+   @media(max-width: 767px) {
+      @include style (1.825rem, 140%);
+   }
+   @media(max-width: 425px) {
+      padding-top: 20px;
+      @include style (1.5rem, 140%);
+   }
 }
