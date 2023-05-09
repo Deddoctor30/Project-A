@@ -22,19 +22,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var bgSwitcher = function bgSwitcher() {
-  var switcher = document.querySelector('.switcher__input');
+  var switcher = document.querySelectorAll('.switcher__input');
   var body = document.querySelector('body');
   var header = document.querySelector('.header__line');
   var footer = document.querySelector('.footer');
   var info = document.querySelector('.info__inner');
   var burgerBg = document.querySelector('.burger__content');
-  switcher.addEventListener('click', function () {
-    if (localStorage.getItem('bg') === 'changed') {
-      localStorage.removeItem('bg');
-    } else {
-      localStorage.setItem('bg', 'changed');
-    }
-    themeChanger();
+  switcher.forEach(function (item) {
+    item.addEventListener('click', function () {
+      if (localStorage.getItem('bg') === 'changed') {
+        localStorage.removeItem('bg');
+      } else {
+        localStorage.setItem('bg', 'changed');
+      }
+      themeChanger();
+    });
   });
   function themeChanger() {
     if (localStorage.getItem('bg') === 'changed') {
@@ -49,7 +51,9 @@ var bgSwitcher = function bgSwitcher() {
           item.style.cssText = 'color: white';
         });
       }
-      switcher.setAttribute('checked', true);
+      switcher.forEach(function (item) {
+        item.setAttribute('checked', true);
+      });
     } else {
       body.style.setProperty('--bg-color', 'white');
       body.style.setProperty('--text-color', 'black');
@@ -57,7 +61,9 @@ var bgSwitcher = function bgSwitcher() {
       footer.style.setProperty('--header-line-color', '#1D84B5');
       info.style.setProperty('--header-line-color', '#1D84B5');
       burgerBg.style.setProperty('--header-line-color', '#1D84B5');
-      switcher.removeAttribute('checked');
+      switcher.forEach(function (item) {
+        item.removeAttribute('checked');
+      });
       if (document.querySelector('.mainMonth')) {
         document.querySelectorAll('.mainMonth').forEach(function (item) {
           item.style.cssText = 'color: black';
@@ -85,20 +91,14 @@ __webpack_require__.r(__webpack_exports__);
 function burger() {
   var content = document.querySelector('.burger__content'),
     icon = document.querySelector('.burger__icon'),
-    burgerTrigger = document.querySelector('.burger__trigger');
+    burgerTrigger = document.querySelector('.burger__trigger'),
+    body = document.querySelector('body');
   burgerTrigger.addEventListener('click', function () {
-    // content.style.cssText = 'top: 0px'
     content.classList.toggle('down');
     icon.classList.toggle('active');
-
-    // header.classList.toggle('menu-burger');
-    // line.classList.toggle('line-wide');
-    // menu.classList.toggle('menu-burger');
-    // bar.classList.toggle('menu-burger');
-    // burgerTrigger.classList.toggle('hide');
+    body.classList.toggle('stop-scrolling');
   });
 }
-
 ;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (burger);
 
