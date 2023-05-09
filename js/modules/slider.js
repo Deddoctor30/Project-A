@@ -6,14 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-const main = () => {
+const slider = () => {
    new Swiper('.swiper', {
       modules: [Navigation, Pagination, Scrollbar, Autoplay],
       loop: true,
-      navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-       },
+
        pagination: {
          el: '.swiper-pagination',
          clickable: true
@@ -22,14 +19,22 @@ const main = () => {
          el: '.swiper-scrollbar',
        },
        slideToClickedSlide: true,
-       // autoHeight: true, //enable auto height
-       autoplay: {
-         delay: 3000,
-         pauseOnMouseEnter: true,
-       },
+      //  autoplay: {
+      //    delay: 3000,
+      //    pauseOnMouseEnter: true,
+      //  },
        speed: 800,
+       autoHeight: true,
+       breakpoints: {
+        767: {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        }
+      }
    });
 }
 
-export default main
+export default slider
 

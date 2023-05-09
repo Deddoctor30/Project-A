@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>IvanovVG</title>
+   <link type="image/png" sizes="16x16" rel="icon" href="./img/favicon/icon16.png">
+   <link type="image/png" sizes="32x32" rel="icon" href="./img/favicon/icon32.png">
+   <link type="image/png" sizes="96x96" rel="icon" href="./img/favicon/icon96.png">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <header class="header">
+      <div class="header__line">
+         <div class="header__content">
+            <div class="header__items">
+               <div class="header__item"><a class="header__link" href="./index.html">Главная страница</a></div>
+               
+               
+               <div class="header__item info">
+                  <div class="info__item header__item"><p class="header__link" id="info-trigger">Информация</p></div>
+                  <div class="info__inner">
+                     <div class="info__item header__item"><a id="info-trigger" href="./information.html">Информация</a></div>
+                     <div class="info__item header__item"><a href="./coaches.html">Тренеры клуба</a></div>
+                     <div class="info__item header__item"><a href="./competition.html">Календарь соревнований</a></div>
+                  </div>
+               </div>
+
+
+               <div class="header__item"><a class="header__link" href="./achievements.html">Последние достижения</a></div>
+               <div class="header__item"><a class="header__link" href="./clinical.html">Диспансеризация</a></div>
+               <div class="header__item"><a class="header__link" href="./articles.html">Статьи</a></div>
+               <div class="header__item"><a class="header__link" href="./about.html">О нас</a></div>
+            </div>
+
+
+            <div class="header__auth">
+               <div class="header__items auth">
+                  <div class="header__item auth__item"><p class="header__link" id="auth-trigger">Настройки</p></div>
+                  <div class="header__inner auth__inner">
+                     <div class="switcher">
+                        <p class="switcher__text header__link">Сменить тему</p>
+                        <input class="switcher__input" type="checkbox" id="switch" />
+                        <label class="switcher__label" for="switch">Toggle</label>
+                     </div>
+                     <div id="singIn" class="header__item auth__item"><a href="#">Войти</a></div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+
+      </div>
+      <div class="upArrow"><span id="upArrow"></span></div>
+
+      <div class="header__burger burger">
+         <div class="burger__content">
+            <div class="burger__item"><a href="./index.html">Главная страница</a></div>
+            <div class="burger__item"><a id="info-trigger" href="./information.html">Информация</a></div>
+            <div class="burger__item"><a href="./coaches.html">Тренеры клуба</a></div>
+            <div class="burger__item"><a href="./competition.html">Календарь соревнований</a></div>
+            <div class="burger__item"><a href="./achievements.html">Последние достижения</a></div>
+            <div class="burger__item"><a href="./clinical.html">Диспансеризация</a></div>
+            <div class="burger__item"><a href="./articles.html">Статьи</a></div>
+            <div class="burger__item"><a href="./about.html">О нас</a></div>
+            <div class="switcher">
+               <p class="switcher__text header__link">Сменить тему</p>
+               <input class="switcher__input" type="checkbox" id="switch" />
+               <label class="switcher__label" for="switch">Toggle</label>
+            </div>
+         </div>
+         <div class="burger__trigger">
+            <div class="burger__icon">
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+      </div>
+   </header>
+   <div class="wrapper">
+
+   <div class="container">
+      <section class="coach">
+         <h1 class="coach__title title animation">
+            Иванов Владимир Геннадьевич
+         </h1>
+         <div class="coach__content">
+            <div class="coach__img">
+               <img src="./img/coaches/11.jpg" alt="Ivanov Vladimir">
+            </div>
+            <div class="coach__info">
+               <div class="coach__about">
+                  <h2>Информация</h2>
+                  <p><span>Должность: </span>Тренер</p>
+                  <p><span>Вид оружия: </span>Шпага</p>
+                  <p><span>Преподает с: </span>2001 года</p>
+                  <p><span>Тренерская категория: </span>А</p>
+                  <p><span>Образование: </span>Высшее</p>
+                  <p><span>Контакты: </span><a href="mailto:Kontact@yandex.ru">Kontact@yandex.ru</a></p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore neque dignissimos sequi quo? Facere vel rerum aspernatur, necessitatibus eaque maiores aut ipsum nihil, culpa dignissimos at voluptate, iste eum?</p>
+               </div>
+            </div>
+            <div class="coach__achievements">
+               <h2>Список учеников</h2>
+               <div class="coach__item">
+                  <img src="./img/coach/avatar.png" alt="avatar">
+                  <p>Понамарев А.В.</p>
+               </div>
+               <div class="coach__item">
+                  <img src="./img/coach/avatar.png" alt="avatar">
+                  <p>Старшин Ю.С.</p>
+               </div>
+               <div class="coach__item">
+                  <img src="./img/coach/avatar.png" alt="avatar">
+                  <p>Овчинников С.В.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+
+   <footer class="footer">
+      <div class="footer__row">
+         <a class="footer__item" href="#"><i class="fa fa-facebook"></i></a>
+         <a class="footer__item" href="#"><i class="fa fa-instagram"></i></a>
+         <a class="footer__item" href="#"><i class="fa fa-youtube"></i></a>
+         <a class="footer__item" href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      
+      <div class="footer__row">
+         <ul class="footer__items">
+            <li class="footer__visit"><a href="#">Написать нам</a></li>
+            <li class="footer__visit"><a href="tel:+99999999">Tel: +7 (495) 174-15-85</a></li>
+            <li class="footer__visit"><a href="#">Контакт №1</a></li>
+            <li class="footer__visit"><a href="#">Контакт №2</a></li>
+         </ul>
+      </div>
+
+      <div class="footer__row footer__rights">
+         <ul class="footer__items">
+            <li class="footer__visit"><a href="#">Политика конфиденциальности</a></li>
+            <li class="footer__visit"><a href="#">Условия использования</a></li>
+            <li class="footer__visit end">by NovikovV  <span>© 2023</span></span></li>
+         </ul>
+      </div>
+   </footer>
+
+
+</div>
+
+   <div id="popup" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <h2 class="popup__title">Войти в админ панель</h2>
+            <span href="#" class="popup__close">X</span>
+            <form class="popup__form" action="">
+               <input class="popup__input" name="pass" type="password" placeholder="Name" required id="pass" autocomplete="off">
+               <label class="popup__label" for="pass">Пароль</label>
+               <button class="popup__btn">Войти</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <script src="./js/bundle.js"></script>
+   <!-- <script src="../dist/js/bundle.js"></script> -->
+
+</body>
+</html>
