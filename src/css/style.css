@@ -488,8 +488,8 @@ html, body {
 .burger__content {
   transition: 0.3s all ease 0s;
   position: absolute;
-  top: -500px;
-  left: 0;
+  top: 0px;
+  left: -100vw;
   background-color: var(--header-line-color);
   width: 100%;
   z-index: -1;
@@ -521,7 +521,7 @@ html, body {
 }
 
 .down {
-  top: 0;
+  left: 0;
 }
 
 .burger__icon span,
@@ -687,23 +687,24 @@ html, body {
   margin-top: 80px;
 }
 .competitions__future {
+  font-weight: 700;
   margin: 0px 0px 10px 0px;
   font-size: 1.125rem;
   line-height: 140%;
 }
 .competitions__past {
+  font-weight: 700;
   margin: 50px 0px 10px 0px;
   font-size: 1.125rem;
   line-height: 140%;
 }
 .competitions__items > *:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .competitions__item {
   min-height: 160px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .competitions__item {
@@ -1605,6 +1606,12 @@ td:hover {
   font-size: 2rem;
   line-height: 140%;
   text-align: center;
+}
+@media (max-width: 424px) {
+  .map__title {
+    font-size: 1.25rem;
+    line-height: 140%;
+  }
 }
 .map__content {
   margin-top: 20px;

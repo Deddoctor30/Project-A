@@ -97,6 +97,10 @@
    &__title {
       @include style (2rem, 140%);
       text-align: center;
+
+      @media(max-width: 424px) {
+      @include style (1.25rem, 140%);
+      }
    }
 
    &__content {

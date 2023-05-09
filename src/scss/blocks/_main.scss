@@ -128,10 +128,12 @@
 .competitions {
    margin-top: 80px;
       &__future {
+         font-weight: 700;
          margin: 0px 0px 10px 0px;
          @include style (1.125rem, 140%);
       }
       &__past {
+         font-weight: 700;
          margin: 50px 0px 10px 0px;
          @include style (1.125rem, 140%);
       }
@@ -143,7 +145,7 @@
       
 		&__items {
          &>*:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
          }
 		}
 
@@ -151,7 +153,7 @@
          min-height: 160px;
          display: flex;
          align-items: center;
-         margin-bottom: 10px;
+         // margin-bottom: 10px;
 
          @media (max-width: 767px) {
             flex-direction: column;
