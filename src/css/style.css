@@ -256,7 +256,6 @@ html, body {
 }
 .auth__inner {
   transition: 0.3s all ease 0s;
-  margin-right: 10px;
   position: absolute;
   top: -200px;
   left: 0;
@@ -266,6 +265,11 @@ html, body {
 }
 .auth__inner a {
   padding: 15px 15px;
+}
+@media (max-width: 1400px) {
+  .auth__inner {
+    left: -102px;
+  }
 }
 
 .switcher__text {
@@ -489,9 +493,9 @@ html, body {
   transition: 0.3s all ease 0s;
   position: absolute;
   top: 0px;
-  left: -100vw;
+  left: -120vw;
   background-color: var(--header-line-color);
-  width: 100%;
+  width: 120%;
   z-index: -1;
   padding: 15px;
 }
@@ -518,6 +522,10 @@ html, body {
   .burger {
     right: 20px;
   }
+}
+
+.burger-label {
+  top: -3px;
 }
 
 .down {
@@ -574,6 +582,11 @@ html, body {
 .burger__icon.active span:nth-child(4) {
   bottom: 50%;
   transform: scale(0) translate(0px, 50%);
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 .main__logo {
@@ -1135,15 +1148,21 @@ html, body {
   flex-direction: column;
   flex: 0 1 400px;
   cursor: pointer;
+  margin: 10px;
   background-color: var(--background-dark);
   box-shadow: var(--shadow);
 }
+@media (max-width: 460px) {
+  .coaches__item {
+    margin: 0px;
+  }
+}
 .coaches__inner {
-  width: 400px;
   padding: 0px 0px 130% 0px;
   overflow: hidden;
   text-align: center;
   position: relative;
+  width: 100%;
 }
 .coaches__inner img {
   width: 100%;
