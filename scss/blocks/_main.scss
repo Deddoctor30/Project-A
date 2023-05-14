@@ -222,7 +222,6 @@
 		}
 
 		&__name {
-
 		}
 
 		&__content {
@@ -258,6 +257,10 @@
 }
 
 .arrows {
+
+   @media (max-width: 767px) {
+      display: none;
+   }
 
    &::after {
       // font-size: 60px;
