@@ -814,11 +814,6 @@ html, body {
   text-decoration: underline;
 }
 
-@media (max-width: 767px) {
-  .arrows {
-    display: none;
-  }
-}
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
