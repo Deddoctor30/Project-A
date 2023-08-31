@@ -1,4 +1,3 @@
-
 const bgSwitcher = () => {
    const switcher = document.querySelectorAll('.switcher__input');
    const body = document.querySelector('body');
@@ -6,8 +5,6 @@ const bgSwitcher = () => {
    const footer = document.querySelector('.footer');
    const info = document.querySelector('.info__inner');
    const burgerBg = document.querySelector('.burger__content');
-
-   
    switcher.forEach(item => {
       item.addEventListener('click', () => {
          if (localStorage.getItem('bg') === 'changed') {
@@ -19,7 +16,6 @@ const bgSwitcher = () => {
       themeChanger();
    })
 }) 
-
    function themeChanger () {
       if (localStorage.getItem('bg') === 'changed') {
          body.style.setProperty('--bg-color', '#171717')
@@ -53,7 +49,6 @@ const bgSwitcher = () => {
          }
       }
    }
-
    themeChanger();
   
 }

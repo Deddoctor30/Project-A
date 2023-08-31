@@ -5,12 +5,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
 const slider = () => {
    new Swiper('.swiper', {
       modules: [Navigation, Pagination, Scrollbar, Autoplay],
       loop: true,
-
        pagination: {
          el: '.swiper-pagination',
          clickable: true
@@ -19,10 +17,6 @@ const slider = () => {
          el: '.swiper-scrollbar',
        },
        slideToClickedSlide: true,
-      //  autoplay: {
-      //    delay: 3000,
-      //    pauseOnMouseEnter: true,
-      //  },
        speed: 800,
        autoHeight: true,
        breakpoints: {

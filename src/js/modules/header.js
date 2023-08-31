@@ -2,12 +2,9 @@ const header = () => {
    const infoTrigger = document.querySelector('#info-trigger');
    const infoInner = document.querySelector('.info__inner');
    const infoBlock = document.querySelector('.info');
-
    const authTrigger = document.querySelector('#auth-trigger');
    const authInner = document.querySelector('.auth__inner');
    const authBlock = document.querySelector('.auth');
-
-
 
    // Расширения хедера
    if (infoTrigger) {

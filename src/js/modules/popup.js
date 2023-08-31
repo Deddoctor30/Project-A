@@ -1,13 +1,9 @@
-
 const popup = () => {
-
-   
    const popup = document.querySelector('.popup');
    const trigger = document.querySelector('#singIn');
    const popupBody = document.querySelector('.popup__body');
    const popupClose = document.querySelector('.popup__close');
    const form = document.querySelector('.popup__form');
-
    trigger.addEventListener('click', () => {
       if (!popup.classList.contains('visible')) {
          popup.classList.add('visible')

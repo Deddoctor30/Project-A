@@ -1,24 +1,4 @@
-// _________________________________Шрифты____________________________________
-// @import url(../fonts/Gilroy/bold/style.css);
-// @import url(../fonts/Gilroy/regular/style.css);
-// @import url(../fonts//Nekst/black/style.css);
-// @import url(../fonts//Nekst/regular/style.css);
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
-// ___________________________________________________________________________
-
-
-// _________________________________Переходы____________________________________
-
-
-// * {
-//    transition: 0.2s all ease 0s;
-// }
-
-// ____________________________Дефолтные настройки______________________________
+@import './fonts.scss';
 
 html, body {
    position: relative;
@@ -29,15 +9,10 @@ html, body {
 	color: var(--text-color);
    z-index: 5;
 }
-
-// _____________________________SCSS переменные________________________________
-
-
 @mixin style($fz, $lh) {
    font-size: $fz;
    line-height: $lh;
 }
-
 @function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
    $k: ($f-max - $f-min)/($v-max - $v-min);
    $b: $f-min - $k * $v-min;
@@ -47,15 +22,10 @@ html, body {
    @return calc( #{$k} * 100vw + #{$b} );
  }
 
-
- //___________________________________________________________
-
 .wrapper {
    min-height: 100%;
    overflow: hidden;
    background-color: var(--bg-color);
-
-   // bg picture
    &::before {
       content: '';
       position: fixed;
@@ -69,37 +39,27 @@ html, body {
       z-index: -5;
       filter: opacity(15%) blur(4px) brightness(50%);
    }
-
 }
 
 .container {
    position: relative;
-   //_________________Ширина контейнера_________________
    max-width: 1170px;
-
-   //_____________________По центру_____________________
    margin: 0 auto;
-
-   //_____________________Отступ безопасности_____________________
    padding: 0px 15px;
    box-sizing: content-box;
    z-index: 50;
 }
-
 .hide {
    display: none;
 }
-
 .visible {
    visibility: visible;
    opacity: 1;
 }
-
 .link {
    text-decoration: underline;
    color: var(--link);
 }
-
 .title {
    padding-top: 60px;
    @include style (2.5rem, 140%);
@@ -108,11 +68,9 @@ html, body {
    margin-bottom: 50vh;
    font-family: 'Russo One', sans-serif;
    text-align: center;
-
    @media (max-width: 980px) {
       padding-top: 40px;
    }
-
    @media(max-width: 767px) {
       @include style (1.825rem, 140%);
    }
